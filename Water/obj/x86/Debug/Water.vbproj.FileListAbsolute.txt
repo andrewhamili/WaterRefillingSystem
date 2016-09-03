@@ -1,0 +1,21 @@
+c:\users\student\documents\visual studio 2010\Projects\Water\Water\bin\Debug\Water.exe
+c:\users\student\documents\visual studio 2010\Projects\Water\Water\bin\Debug\Water.pdb
+c:\users\student\documents\visual studio 2010\Projects\Water\Water\bin\Debug\Water.xml
+c:\users\student\documents\visual studio 2010\Projects\Water\Water\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\student\documents\visual studio 2010\Projects\Water\Water\obj\x86\Debug\Water.Form1.resources
+c:\users\student\documents\visual studio 2010\Projects\Water\Water\obj\x86\Debug\Water.Resources.resources
+c:\users\student\documents\visual studio 2010\Projects\Water\Water\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\student\documents\visual studio 2010\Projects\Water\Water\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\student\documents\visual studio 2010\Projects\Water\Water\obj\x86\Debug\Water.exe
+c:\users\student\documents\visual studio 2010\Projects\Water\Water\obj\x86\Debug\Water.xml
+c:\users\student\documents\visual studio 2010\Projects\Water\Water\obj\x86\Debug\Water.pdb
+C:\Users\Genelyne\Desktop\Final\Water\Water\obj\x86\Debug\Water.exe
+C:\Users\Genelyne\Desktop\Final\Water\Water\obj\x86\Debug\Water.xml
+C:\Users\Genelyne\Desktop\Final\Water\Water\obj\x86\Debug\Water.pdb
+C:\Users\Genelyne\Desktop\Final\Water\Water\bin\Debug\Water.exe
+C:\Users\Genelyne\Desktop\Final\Water\Water\bin\Debug\Water.pdb
+C:\Users\Genelyne\Desktop\Final\Water\Water\bin\Debug\Water.xml
+C:\Users\Genelyne\Desktop\Final\Water\Water\obj\x86\Debug\Water.Form1.resources
+C:\Users\Genelyne\Desktop\Final\Water\Water\obj\x86\Debug\Water.Resources.resources
+C:\Users\Genelyne\Desktop\Final\Water\Water\obj\x86\Debug\Water.vbproj.GenerateResource.Cache
+C:\Users\Genelyne\Desktop\Final\Water\Water\obj\x86\Debug\Water.Form_LogIn.resources
