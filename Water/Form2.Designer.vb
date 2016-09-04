@@ -49,11 +49,11 @@ Partial Class Form_LogIn
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.Font = New System.Drawing.Font("Bradley Hand ITC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.SteelBlue
         Me.Label1.Location = New System.Drawing.Point(18, 234)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(98, 24)
+        Me.Label1.Size = New System.Drawing.Size(105, 24)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Username"
         '
@@ -61,11 +61,11 @@ Partial Class Form_LogIn
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Font = New System.Drawing.Font("Bradley Hand ITC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.SteelBlue
         Me.Label2.Location = New System.Drawing.Point(18, 267)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(90, 24)
+        Me.Label2.Size = New System.Drawing.Size(100, 24)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Password"
         '
@@ -82,6 +82,7 @@ Partial Class Form_LogIn
         Me.Txtbox_Password.Name = "Txtbox_Password"
         Me.Txtbox_Password.Size = New System.Drawing.Size(150, 20)
         Me.Txtbox_Password.TabIndex = 11
+        Me.Txtbox_Password.UseSystemPasswordChar = True
         '
         'Button_Go
         '
