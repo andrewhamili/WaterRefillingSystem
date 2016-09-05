@@ -6,6 +6,10 @@ Public Class Form_Home
     Public EmployeeAction As String
     Public UsernameEdit As String
 
+    Private Sub Form_Home_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
+        Form_LogIn.Show()
+    End Sub
+
     Private Sub Form_Home_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Panel_Employee.Hide()
         Panel_Inventory.Hide()
