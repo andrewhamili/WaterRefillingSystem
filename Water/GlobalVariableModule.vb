@@ -11,5 +11,6 @@ Module GlobalVariableModule
     Public SystemTitle As String = "Water Refilling Station"
     Public activeusername As String
     Public usertype As String
+    '
 
 End Module
