@@ -1,0 +1,10 @@
+C:\Users\Genelyne\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.Form_Home.resources
+C:\Users\Genelyne\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.Form_LogIn.resources
+C:\Users\Genelyne\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.Resources.resources
+C:\Users\Genelyne\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.vbproj.GenerateResource.Cache
+C:\Users\Genelyne\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\bin\Debug\Water.exe
+C:\Users\Genelyne\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\bin\Debug\Water.pdb
+C:\Users\Genelyne\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\bin\Debug\Water.xml
+C:\Users\Genelyne\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.exe
+C:\Users\Genelyne\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.xml
+C:\Users\Genelyne\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.pdb

@@ -24,8 +24,7 @@ Partial Class Form_Home
     Private Sub InitializeComponent()
         Me.Panel_Transaction = New System.Windows.Forms.Panel()
         Me.Label_TransactionNum = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label_Prize = New System.Windows.Forms.Label()
+        Me.Label_TransactionPrize = New System.Windows.Forms.Label()
         Me.Label_TransactionDescription = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label_Description = New System.Windows.Forms.Label()
@@ -64,6 +63,8 @@ Partial Class Form_Home
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Panel_EmployeeMain = New System.Windows.Forms.Panel()
+        Me.Label_EmployeeUsertype = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
         Me.Label_EmployeeLastname = New System.Windows.Forms.Label()
         Me.Label_EmployeeFirstname = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
@@ -97,23 +98,41 @@ Partial Class Form_Home
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel_Sales = New System.Windows.Forms.Panel()
-        Me.TextBox_InventoryEndDate = New System.Windows.Forms.TextBox()
-        Me.TextBox_InventoryStartDate = New System.Windows.Forms.TextBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
         Me.OpenFileDialog_ChooseEmployeePicture = New System.Windows.Forms.OpenFileDialog()
         Me.B5_LogO = New System.Windows.Forms.Button()
         Me.B4_Sales = New System.Windows.Forms.Button()
         Me.B3_Inventory = New System.Windows.Forms.Button()
         Me.B2_Employee = New System.Windows.Forms.Button()
         Me.B1_Transaction = New System.Windows.Forms.Button()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.DateTimePicker_SalesStartDate = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker_SalesEndDate = New System.Windows.Forms.DateTimePicker()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.Panel_MaintenaceProductSales = New System.Windows.Forms.Panel()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.GroupBox_Product = New System.Windows.Forms.GroupBox()
+        Me.DataGridView4 = New System.Windows.Forms.DataGridView()
+        Me.Button_ProductMaintenanceAdd = New System.Windows.Forms.Button()
+        Me.Button_ProductMaintenanceEdit = New System.Windows.Forms.Button()
+        Me.Button_ProductMaintenanceDelete = New System.Windows.Forms.Button()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.TextBox_MaintenanceProdName = New System.Windows.Forms.TextBox()
+        Me.TextBox_MaintenanceProdQuantity = New System.Windows.Forms.TextBox()
+        Me.TextBox_MaintenanceProdPrice = New System.Windows.Forms.TextBox()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView5 = New System.Windows.Forms.DataGridView()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel_Transaction.SuspendLayout()
         Me.Panel_Employee.SuspendLayout()
         Me.Panel_EmployeeManager.SuspendLayout()
@@ -122,17 +141,28 @@ Partial Class Form_Home
         CType(Me.PictureBox_EmployeePicture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_Inventory.SuspendLayout()
         Me.Panel_Sales.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel_MaintenaceProductSales.SuspendLayout()
+        Me.GroupBox_Product.SuspendLayout()
+        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox5.SuspendLayout()
+        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel_Transaction
         '
+        Me.Panel_Transaction.Controls.Add(Me.DataGridView2)
         Me.Panel_Transaction.Controls.Add(Me.Label_TransactionNum)
-        Me.Panel_Transaction.Controls.Add(Me.GroupBox1)
-        Me.Panel_Transaction.Controls.Add(Me.Label_Prize)
+        Me.Panel_Transaction.Controls.Add(Me.Label_TransactionPrize)
         Me.Panel_Transaction.Controls.Add(Me.Label_TransactionDescription)
-        Me.Panel_Transaction.Controls.Add(Me.Label6)
         Me.Panel_Transaction.Controls.Add(Me.Label_Description)
         Me.Panel_Transaction.Controls.Add(Me.Label_d)
+        Me.Panel_Transaction.Controls.Add(Me.Panel_Sales)
         Me.Panel_Transaction.Controls.Add(Me.TextBox_Name)
         Me.Panel_Transaction.Controls.Add(Me.Label2)
         Me.Panel_Transaction.Controls.Add(Me.Label1)
@@ -142,7 +172,7 @@ Partial Class Form_Home
         Me.Panel_Transaction.Controls.Add(Me.Label4)
         Me.Panel_Transaction.Controls.Add(Me.Label3)
         Me.Panel_Transaction.Controls.Add(Me.ComboBox_Products)
-        Me.Panel_Transaction.Location = New System.Drawing.Point(297, 11)
+        Me.Panel_Transaction.Location = New System.Drawing.Point(644, 13)
         Me.Panel_Transaction.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel_Transaction.Name = "Panel_Transaction"
         Me.Panel_Transaction.Size = New System.Drawing.Size(453, 568)
@@ -152,52 +182,44 @@ Partial Class Form_Home
         '
         Me.Label_TransactionNum.AutoSize = True
         Me.Label_TransactionNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.Label_TransactionNum.Location = New System.Drawing.Point(224, 15)
+        Me.Label_TransactionNum.Location = New System.Drawing.Point(160, 22)
         Me.Label_TransactionNum.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label_TransactionNum.Name = "Label_TransactionNum"
         Me.Label_TransactionNum.Size = New System.Drawing.Size(161, 18)
         Me.Label_TransactionNum.TabIndex = 16
         Me.Label_TransactionNum.Text = "Label_TransactionNum"
         '
-        'GroupBox1
+        'Label_TransactionPrize
         '
-        Me.GroupBox1.Location = New System.Drawing.Point(30, 407)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(375, 152)
-        Me.GroupBox1.TabIndex = 15
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
-        '
-        'Label_Prize
-        '
-        Me.Label_Prize.AutoSize = True
-        Me.Label_Prize.BackColor = System.Drawing.Color.White
-        Me.Label_Prize.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_Prize.Location = New System.Drawing.Point(94, 379)
-        Me.Label_Prize.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label_Prize.Name = "Label_Prize"
-        Me.Label_Prize.Size = New System.Drawing.Size(0, 18)
-        Me.Label_Prize.TabIndex = 14
+        Me.Label_TransactionPrize.AutoSize = True
+        Me.Label_TransactionPrize.BackColor = System.Drawing.Color.Transparent
+        Me.Label_TransactionPrize.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_TransactionPrize.Location = New System.Drawing.Point(163, 163)
+        Me.Label_TransactionPrize.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label_TransactionPrize.Name = "Label_TransactionPrize"
+        Me.Label_TransactionPrize.Size = New System.Drawing.Size(163, 18)
+        Me.Label_TransactionPrize.TabIndex = 14
+        Me.Label_TransactionPrize.Text = "Label_TransactionPrize"
         '
         'Label_TransactionDescription
         '
         Me.Label_TransactionDescription.AutoSize = True
-        Me.Label_TransactionDescription.BackColor = System.Drawing.Color.White
+        Me.Label_TransactionDescription.BackColor = System.Drawing.Color.Transparent
         Me.Label_TransactionDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_TransactionDescription.Location = New System.Drawing.Point(162, 281)
+        Me.Label_TransactionDescription.Location = New System.Drawing.Point(163, 136)
         Me.Label_TransactionDescription.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label_TransactionDescription.Name = "Label_TransactionDescription"
-        Me.Label_TransactionDescription.Size = New System.Drawing.Size(0, 18)
+        Me.Label_TransactionDescription.Size = New System.Drawing.Size(204, 18)
         Me.Label_TransactionDescription.TabIndex = 13
+        Me.Label_TransactionDescription.Text = "Label_TransactionDescription"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(66, 325)
+        Me.Label6.ForeColor = System.Drawing.Color.Lime
+        Me.Label6.Location = New System.Drawing.Point(38, 142)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(46, 18)
@@ -220,7 +242,8 @@ Partial Class Form_Home
         Me.Label_d.AutoSize = True
         Me.Label_d.BackColor = System.Drawing.Color.Transparent
         Me.Label_d.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_d.Location = New System.Drawing.Point(4, 280)
+        Me.Label_d.ForeColor = System.Drawing.Color.Lime
+        Me.Label_d.Location = New System.Drawing.Point(51, 134)
         Me.Label_d.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label_d.Name = "Label_d"
         Me.Label_d.Size = New System.Drawing.Size(87, 18)
@@ -229,7 +252,7 @@ Partial Class Form_Home
         '
         'TextBox_Name
         '
-        Me.TextBox_Name.Location = New System.Drawing.Point(224, 53)
+        Me.TextBox_Name.Location = New System.Drawing.Point(163, 40)
         Me.TextBox_Name.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox_Name.Name = "TextBox_Name"
         Me.TextBox_Name.Size = New System.Drawing.Size(180, 24)
@@ -240,7 +263,8 @@ Partial Class Form_Home
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(118, 51)
+        Me.Label2.ForeColor = System.Drawing.Color.Lime
+        Me.Label2.Location = New System.Drawing.Point(88, 40)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(52, 18)
@@ -252,6 +276,7 @@ Partial Class Form_Home
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Lime
         Me.Label1.Location = New System.Drawing.Point(26, 19)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
@@ -261,20 +286,22 @@ Partial Class Form_Home
         '
         'Button_Cancel
         '
-        Me.Button_Cancel.Location = New System.Drawing.Point(292, 235)
+        Me.Button_Cancel.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.Button_Cancel.Location = New System.Drawing.Point(253, 201)
         Me.Button_Cancel.Margin = New System.Windows.Forms.Padding(4)
         Me.Button_Cancel.Name = "Button_Cancel"
-        Me.Button_Cancel.Size = New System.Drawing.Size(112, 32)
+        Me.Button_Cancel.Size = New System.Drawing.Size(70, 32)
         Me.Button_Cancel.TabIndex = 5
         Me.Button_Cancel.Text = "Cancel"
         Me.Button_Cancel.UseVisualStyleBackColor = True
         '
         'Button_Ok
         '
-        Me.Button_Ok.Location = New System.Drawing.Point(292, 197)
+        Me.Button_Ok.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.Button_Ok.Location = New System.Drawing.Point(329, 201)
         Me.Button_Ok.Margin = New System.Windows.Forms.Padding(4)
         Me.Button_Ok.Name = "Button_Ok"
-        Me.Button_Ok.Size = New System.Drawing.Size(112, 32)
+        Me.Button_Ok.Size = New System.Drawing.Size(70, 32)
         Me.Button_Ok.TabIndex = 4
         Me.Button_Ok.Text = "Ok"
         Me.Button_Ok.UseVisualStyleBackColor = True
@@ -283,7 +310,7 @@ Partial Class Form_Home
         '
         Me.ComboBox_Refill.FormattingEnabled = True
         Me.ComboBox_Refill.Items.AddRange(New Object() {"Gallon w/ Cap", "Gallon", "Big Cap", "Bottle w/ Cap", "Small Cap", "1 Gallon", "500 mL"})
-        Me.ComboBox_Refill.Location = New System.Drawing.Point(224, 147)
+        Me.ComboBox_Refill.Location = New System.Drawing.Point(163, 101)
         Me.ComboBox_Refill.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox_Refill.Name = "ComboBox_Refill"
         Me.ComboBox_Refill.Size = New System.Drawing.Size(180, 26)
@@ -294,7 +321,8 @@ Partial Class Form_Home
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(142, 145)
+        Me.Label4.ForeColor = System.Drawing.Color.Lime
+        Me.Label4.Location = New System.Drawing.Point(88, 102)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(40, 18)
@@ -306,7 +334,8 @@ Partial Class Form_Home
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(94, 96)
+        Me.Label3.ForeColor = System.Drawing.Color.Lime
+        Me.Label3.Location = New System.Drawing.Point(66, 67)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(72, 18)
@@ -317,7 +346,7 @@ Partial Class Form_Home
         '
         Me.ComboBox_Products.FormattingEnabled = True
         Me.ComboBox_Products.Items.AddRange(New Object() {"Gallon w/ Cap", "Gallon", "Big Cap", "Bottle w/ Cap", "Small Cap", "1 Gallon", "500 mL"})
-        Me.ComboBox_Products.Location = New System.Drawing.Point(224, 96)
+        Me.ComboBox_Products.Location = New System.Drawing.Point(163, 69)
         Me.ComboBox_Products.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox_Products.Name = "ComboBox_Products"
         Me.ComboBox_Products.Size = New System.Drawing.Size(180, 26)
@@ -327,10 +356,10 @@ Partial Class Form_Home
         '
         Me.Panel_Employee.Controls.Add(Me.Panel_EmployeeManager)
         Me.Panel_Employee.Controls.Add(Me.Panel_EmployeeMain)
-        Me.Panel_Employee.Location = New System.Drawing.Point(213, 11)
+        Me.Panel_Employee.Location = New System.Drawing.Point(794, 21)
         Me.Panel_Employee.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel_Employee.Name = "Panel_Employee"
-        Me.Panel_Employee.Size = New System.Drawing.Size(691, 602)
+        Me.Panel_Employee.Size = New System.Drawing.Size(1108, 602)
         Me.Panel_Employee.TabIndex = 12
         '
         'Panel_EmployeeManager
@@ -357,15 +386,16 @@ Partial Class Form_Home
         Me.Panel_EmployeeManager.Controls.Add(Me.Label22)
         Me.Panel_EmployeeManager.Controls.Add(Me.Label21)
         Me.Panel_EmployeeManager.Controls.Add(Me.Label15)
-        Me.Panel_EmployeeManager.Location = New System.Drawing.Point(29, 8)
+        Me.Panel_EmployeeManager.Location = New System.Drawing.Point(26, 19)
         Me.Panel_EmployeeManager.Name = "Panel_EmployeeManager"
-        Me.Panel_EmployeeManager.Size = New System.Drawing.Size(608, 544)
+        Me.Panel_EmployeeManager.Size = New System.Drawing.Size(398, 496)
         Me.Panel_EmployeeManager.TabIndex = 42
         '
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(79, 394)
+        Me.Label29.ForeColor = System.Drawing.Color.Lime
+        Me.Label29.Location = New System.Drawing.Point(69, 301)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(77, 18)
         Me.Label29.TabIndex = 21
@@ -373,7 +403,7 @@ Partial Class Form_Home
         '
         'TextBox_Username
         '
-        Me.TextBox_Username.Location = New System.Drawing.Point(166, 391)
+        Me.TextBox_Username.Location = New System.Drawing.Point(166, 296)
         Me.TextBox_Username.Name = "TextBox_Username"
         Me.TextBox_Username.Size = New System.Drawing.Size(187, 24)
         Me.TextBox_Username.TabIndex = 20
@@ -381,7 +411,8 @@ Partial Class Form_Home
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(93, 454)
+        Me.Label28.ForeColor = System.Drawing.Color.Lime
+        Me.Label28.Location = New System.Drawing.Point(79, 359)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(67, 18)
         Me.Label28.TabIndex = 19
@@ -392,14 +423,14 @@ Partial Class Form_Home
         Me.ComboBox_Usertype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_Usertype.FormattingEnabled = True
         Me.ComboBox_Usertype.Items.AddRange(New Object() {"Owner", "Employee"})
-        Me.ComboBox_Usertype.Location = New System.Drawing.Point(166, 450)
+        Me.ComboBox_Usertype.Location = New System.Drawing.Point(166, 356)
         Me.ComboBox_Usertype.Name = "ComboBox_Usertype"
         Me.ComboBox_Usertype.Size = New System.Drawing.Size(187, 26)
         Me.ComboBox_Usertype.TabIndex = 18
         '
         'TextBox_EmployeePassword
         '
-        Me.TextBox_EmployeePassword.Location = New System.Drawing.Point(166, 420)
+        Me.TextBox_EmployeePassword.Location = New System.Drawing.Point(166, 326)
         Me.TextBox_EmployeePassword.Name = "TextBox_EmployeePassword"
         Me.TextBox_EmployeePassword.Size = New System.Drawing.Size(187, 24)
         Me.TextBox_EmployeePassword.TabIndex = 17
@@ -408,7 +439,8 @@ Partial Class Form_Home
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(82, 423)
+        Me.Label5.ForeColor = System.Drawing.Color.Lime
+        Me.Label5.Location = New System.Drawing.Point(71, 332)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(75, 18)
         Me.Label5.TabIndex = 16
@@ -416,9 +448,10 @@ Partial Class Form_Home
         '
         'Button_ChoosePicture
         '
-        Me.Button_ChoosePicture.Location = New System.Drawing.Point(241, 97)
+        Me.Button_ChoosePicture.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.Button_ChoosePicture.Location = New System.Drawing.Point(166, 87)
         Me.Button_ChoosePicture.Name = "Button_ChoosePicture"
-        Me.Button_ChoosePicture.Size = New System.Drawing.Size(95, 45)
+        Me.Button_ChoosePicture.Size = New System.Drawing.Size(147, 32)
         Me.Button_ChoosePicture.TabIndex = 15
         Me.Button_ChoosePicture.Text = "Choose a picture"
         Me.Button_ChoosePicture.UseVisualStyleBackColor = True
@@ -426,18 +459,19 @@ Partial Class Form_Home
         'PictureBox_ChooseEmployeePicture
         '
         Me.PictureBox_ChooseEmployeePicture.Image = Global.Water.My.Resources.Resources.male_image
-        Me.PictureBox_ChooseEmployeePicture.Location = New System.Drawing.Point(82, 7)
+        Me.PictureBox_ChooseEmployeePicture.Location = New System.Drawing.Point(13, 10)
         Me.PictureBox_ChooseEmployeePicture.Name = "PictureBox_ChooseEmployeePicture"
-        Me.PictureBox_ChooseEmployeePicture.Size = New System.Drawing.Size(133, 175)
+        Me.PictureBox_ChooseEmployeePicture.Size = New System.Drawing.Size(133, 107)
         Me.PictureBox_ChooseEmployeePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox_ChooseEmployeePicture.TabIndex = 14
         Me.PictureBox_ChooseEmployeePicture.TabStop = False
         '
         'Button_CancelEmployee
         '
-        Me.Button_CancelEmployee.Location = New System.Drawing.Point(151, 494)
+        Me.Button_CancelEmployee.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.Button_CancelEmployee.Location = New System.Drawing.Point(206, 428)
         Me.Button_CancelEmployee.Name = "Button_CancelEmployee"
-        Me.Button_CancelEmployee.Size = New System.Drawing.Size(106, 34)
+        Me.Button_CancelEmployee.Size = New System.Drawing.Size(72, 23)
         Me.Button_CancelEmployee.TabIndex = 13
         Me.Button_CancelEmployee.TabStop = False
         Me.Button_CancelEmployee.Text = "Cancel"
@@ -445,9 +479,10 @@ Partial Class Form_Home
         '
         'Button_SaveEmployee
         '
-        Me.Button_SaveEmployee.Location = New System.Drawing.Point(277, 492)
+        Me.Button_SaveEmployee.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.Button_SaveEmployee.Location = New System.Drawing.Point(284, 426)
         Me.Button_SaveEmployee.Name = "Button_SaveEmployee"
-        Me.Button_SaveEmployee.Size = New System.Drawing.Size(92, 36)
+        Me.Button_SaveEmployee.Size = New System.Drawing.Size(69, 25)
         Me.Button_SaveEmployee.TabIndex = 12
         Me.Button_SaveEmployee.TabStop = False
         Me.Button_SaveEmployee.Text = "Save"
@@ -455,42 +490,42 @@ Partial Class Form_Home
         '
         'TextBox_ContactNum
         '
-        Me.TextBox_ContactNum.Location = New System.Drawing.Point(166, 360)
+        Me.TextBox_ContactNum.Location = New System.Drawing.Point(166, 266)
         Me.TextBox_ContactNum.Name = "TextBox_ContactNum"
         Me.TextBox_ContactNum.Size = New System.Drawing.Size(187, 24)
         Me.TextBox_ContactNum.TabIndex = 5
         '
         'TextBox_Email
         '
-        Me.TextBox_Email.Location = New System.Drawing.Point(166, 320)
+        Me.TextBox_Email.Location = New System.Drawing.Point(166, 237)
         Me.TextBox_Email.Name = "TextBox_Email"
         Me.TextBox_Email.Size = New System.Drawing.Size(187, 24)
         Me.TextBox_Email.TabIndex = 4
         '
         'TextBox_Address
         '
-        Me.TextBox_Address.Location = New System.Drawing.Point(166, 289)
+        Me.TextBox_Address.Location = New System.Drawing.Point(166, 210)
         Me.TextBox_Address.Name = "TextBox_Address"
         Me.TextBox_Address.Size = New System.Drawing.Size(187, 24)
         Me.TextBox_Address.TabIndex = 3
         '
         'TextBox_MiddleName
         '
-        Me.TextBox_MiddleName.Location = New System.Drawing.Point(166, 257)
+        Me.TextBox_MiddleName.Location = New System.Drawing.Point(166, 182)
         Me.TextBox_MiddleName.Name = "TextBox_MiddleName"
         Me.TextBox_MiddleName.Size = New System.Drawing.Size(187, 24)
         Me.TextBox_MiddleName.TabIndex = 2
         '
         'TextBox_FirstName
         '
-        Me.TextBox_FirstName.Location = New System.Drawing.Point(166, 223)
+        Me.TextBox_FirstName.Location = New System.Drawing.Point(166, 156)
         Me.TextBox_FirstName.Name = "TextBox_FirstName"
         Me.TextBox_FirstName.Size = New System.Drawing.Size(187, 24)
         Me.TextBox_FirstName.TabIndex = 1
         '
         'TextBox_LastName
         '
-        Me.TextBox_LastName.Location = New System.Drawing.Point(166, 188)
+        Me.TextBox_LastName.Location = New System.Drawing.Point(166, 130)
         Me.TextBox_LastName.Name = "TextBox_LastName"
         Me.TextBox_LastName.Size = New System.Drawing.Size(187, 24)
         Me.TextBox_LastName.TabIndex = 0
@@ -498,7 +533,8 @@ Partial Class Form_Home
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(43, 363)
+        Me.Label25.ForeColor = System.Drawing.Color.Lime
+        Me.Label25.Location = New System.Drawing.Point(29, 266)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(117, 18)
         Me.Label25.TabIndex = 5
@@ -507,7 +543,8 @@ Partial Class Form_Home
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(110, 323)
+        Me.Label24.ForeColor = System.Drawing.Color.Lime
+        Me.Label24.Location = New System.Drawing.Point(91, 237)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(50, 18)
         Me.Label24.TabIndex = 4
@@ -516,7 +553,8 @@ Partial Class Form_Home
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(98, 292)
+        Me.Label23.ForeColor = System.Drawing.Color.Lime
+        Me.Label23.Location = New System.Drawing.Point(79, 213)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(62, 18)
         Me.Label23.TabIndex = 3
@@ -525,7 +563,8 @@ Partial Class Form_Home
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(65, 260)
+        Me.Label22.ForeColor = System.Drawing.Color.Lime
+        Me.Label22.Location = New System.Drawing.Point(51, 188)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(95, 18)
         Me.Label22.TabIndex = 2
@@ -534,7 +573,8 @@ Partial Class Form_Home
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(79, 226)
+        Me.Label21.ForeColor = System.Drawing.Color.Lime
+        Me.Label21.Location = New System.Drawing.Point(65, 159)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(81, 18)
         Me.Label21.TabIndex = 1
@@ -543,7 +583,8 @@ Partial Class Form_Home
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(79, 191)
+        Me.Label15.ForeColor = System.Drawing.Color.Lime
+        Me.Label15.Location = New System.Drawing.Point(66, 135)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(80, 18)
         Me.Label15.TabIndex = 0
@@ -551,6 +592,8 @@ Partial Class Form_Home
         '
         'Panel_EmployeeMain
         '
+        Me.Panel_EmployeeMain.Controls.Add(Me.Label_EmployeeUsertype)
+        Me.Panel_EmployeeMain.Controls.Add(Me.Label30)
         Me.Panel_EmployeeMain.Controls.Add(Me.Label_EmployeeLastname)
         Me.Panel_EmployeeMain.Controls.Add(Me.Label_EmployeeFirstname)
         Me.Panel_EmployeeMain.Controls.Add(Me.Label27)
@@ -570,13 +613,32 @@ Partial Class Form_Home
         Me.Panel_EmployeeMain.Controls.Add(Me.ListBox_EmployeeList)
         Me.Panel_EmployeeMain.Location = New System.Drawing.Point(26, 19)
         Me.Panel_EmployeeMain.Name = "Panel_EmployeeMain"
-        Me.Panel_EmployeeMain.Size = New System.Drawing.Size(610, 492)
+        Me.Panel_EmployeeMain.Size = New System.Drawing.Size(508, 496)
         Me.Panel_EmployeeMain.TabIndex = 47
+        '
+        'Label_EmployeeUsertype
+        '
+        Me.Label_EmployeeUsertype.AutoSize = True
+        Me.Label_EmployeeUsertype.Location = New System.Drawing.Point(124, 310)
+        Me.Label_EmployeeUsertype.Name = "Label_EmployeeUsertype"
+        Me.Label_EmployeeUsertype.Size = New System.Drawing.Size(176, 18)
+        Me.Label_EmployeeUsertype.TabIndex = 65
+        Me.Label_EmployeeUsertype.Text = "Label_EmployeeUsertype"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.ForeColor = System.Drawing.Color.Lime
+        Me.Label30.Location = New System.Drawing.Point(43, 310)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(67, 18)
+        Me.Label30.TabIndex = 64
+        Me.Label30.Text = "Usertype"
         '
         'Label_EmployeeLastname
         '
         Me.Label_EmployeeLastname.AutoSize = True
-        Me.Label_EmployeeLastname.Location = New System.Drawing.Point(297, 167)
+        Me.Label_EmployeeLastname.Location = New System.Drawing.Point(120, 143)
         Me.Label_EmployeeLastname.Name = "Label_EmployeeLastname"
         Me.Label_EmployeeLastname.Size = New System.Drawing.Size(182, 18)
         Me.Label_EmployeeLastname.TabIndex = 63
@@ -585,7 +647,7 @@ Partial Class Form_Home
         'Label_EmployeeFirstname
         '
         Me.Label_EmployeeFirstname.AutoSize = True
-        Me.Label_EmployeeFirstname.Location = New System.Drawing.Point(297, 196)
+        Me.Label_EmployeeFirstname.Location = New System.Drawing.Point(124, 167)
         Me.Label_EmployeeFirstname.Name = "Label_EmployeeFirstname"
         Me.Label_EmployeeFirstname.Size = New System.Drawing.Size(183, 18)
         Me.Label_EmployeeFirstname.TabIndex = 62
@@ -594,7 +656,8 @@ Partial Class Form_Home
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(196, 167)
+        Me.Label27.ForeColor = System.Drawing.Color.Lime
+        Me.Label27.Location = New System.Drawing.Point(23, 143)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(80, 18)
         Me.Label27.TabIndex = 61
@@ -603,7 +666,8 @@ Partial Class Form_Home
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(196, 196)
+        Me.Label26.ForeColor = System.Drawing.Color.Lime
+        Me.Label26.Location = New System.Drawing.Point(25, 167)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(81, 18)
         Me.Label26.TabIndex = 60
@@ -611,36 +675,39 @@ Partial Class Form_Home
         '
         'Button_DeleteEmployee
         '
-        Me.Button_DeleteEmployee.Location = New System.Drawing.Point(250, 345)
+        Me.Button_DeleteEmployee.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.Button_DeleteEmployee.Location = New System.Drawing.Point(165, 424)
         Me.Button_DeleteEmployee.Name = "Button_DeleteEmployee"
-        Me.Button_DeleteEmployee.Size = New System.Drawing.Size(116, 44)
+        Me.Button_DeleteEmployee.Size = New System.Drawing.Size(131, 27)
         Me.Button_DeleteEmployee.TabIndex = 59
         Me.Button_DeleteEmployee.Text = "Delete Employee"
         Me.Button_DeleteEmployee.UseVisualStyleBackColor = True
         '
         'Button_EditEmployee
         '
-        Me.Button_EditEmployee.Location = New System.Drawing.Point(132, 345)
+        Me.Button_EditEmployee.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.Button_EditEmployee.Location = New System.Drawing.Point(321, 424)
         Me.Button_EditEmployee.Name = "Button_EditEmployee"
-        Me.Button_EditEmployee.Size = New System.Drawing.Size(112, 44)
+        Me.Button_EditEmployee.Size = New System.Drawing.Size(112, 27)
         Me.Button_EditEmployee.TabIndex = 58
         Me.Button_EditEmployee.Text = "Edit Employee"
         Me.Button_EditEmployee.UseVisualStyleBackColor = True
         '
         'Button_AddEmployee
         '
-        Me.Button_AddEmployee.Location = New System.Drawing.Point(16, 345)
+        Me.Button_AddEmployee.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.Button_AddEmployee.Location = New System.Drawing.Point(23, 424)
         Me.Button_AddEmployee.Name = "Button_AddEmployee"
-        Me.Button_AddEmployee.Size = New System.Drawing.Size(104, 44)
+        Me.Button_AddEmployee.Size = New System.Drawing.Size(124, 27)
         Me.Button_AddEmployee.TabIndex = 57
-        Me.Button_AddEmployee.Text = "Add New Employee"
+        Me.Button_AddEmployee.Text = "Add Employee"
         Me.Button_AddEmployee.UseVisualStyleBackColor = True
         '
         'PictureBox_EmployeePicture
         '
-        Me.PictureBox_EmployeePicture.Location = New System.Drawing.Point(205, 6)
+        Me.PictureBox_EmployeePicture.Location = New System.Drawing.Point(23, 8)
         Me.PictureBox_EmployeePicture.Name = "PictureBox_EmployeePicture"
-        Me.PictureBox_EmployeePicture.Size = New System.Drawing.Size(120, 146)
+        Me.PictureBox_EmployeePicture.Size = New System.Drawing.Size(122, 117)
         Me.PictureBox_EmployeePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox_EmployeePicture.TabIndex = 56
         Me.PictureBox_EmployeePicture.TabStop = False
@@ -648,7 +715,8 @@ Partial Class Form_Home
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(196, 318)
+        Me.Label10.ForeColor = System.Drawing.Color.Lime
+        Me.Label10.Location = New System.Drawing.Point(43, 277)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(60, 18)
         Me.Label10.TabIndex = 55
@@ -657,7 +725,8 @@ Partial Class Form_Home
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(196, 282)
+        Me.Label9.ForeColor = System.Drawing.Color.Lime
+        Me.Label9.Location = New System.Drawing.Point(53, 248)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(50, 18)
         Me.Label9.TabIndex = 54
@@ -666,7 +735,8 @@ Partial Class Form_Home
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(196, 255)
+        Me.Label8.ForeColor = System.Drawing.Color.Lime
+        Me.Label8.Location = New System.Drawing.Point(41, 219)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(62, 18)
         Me.Label8.TabIndex = 53
@@ -675,7 +745,8 @@ Partial Class Form_Home
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(196, 224)
+        Me.Label7.ForeColor = System.Drawing.Color.Lime
+        Me.Label7.Location = New System.Drawing.Point(8, 192)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(95, 18)
         Me.Label7.TabIndex = 52
@@ -684,7 +755,7 @@ Partial Class Form_Home
         'Label_EmployeeContact
         '
         Me.Label_EmployeeContact.AutoSize = True
-        Me.Label_EmployeeContact.Location = New System.Drawing.Point(297, 319)
+        Me.Label_EmployeeContact.Location = New System.Drawing.Point(124, 277)
         Me.Label_EmployeeContact.Name = "Label_EmployeeContact"
         Me.Label_EmployeeContact.Size = New System.Drawing.Size(169, 18)
         Me.Label_EmployeeContact.TabIndex = 51
@@ -693,7 +764,7 @@ Partial Class Form_Home
         'Label_EmployeeEmail
         '
         Me.Label_EmployeeEmail.AutoSize = True
-        Me.Label_EmployeeEmail.Location = New System.Drawing.Point(297, 288)
+        Me.Label_EmployeeEmail.Location = New System.Drawing.Point(120, 248)
         Me.Label_EmployeeEmail.Name = "Label_EmployeeEmail"
         Me.Label_EmployeeEmail.Size = New System.Drawing.Size(154, 18)
         Me.Label_EmployeeEmail.TabIndex = 50
@@ -702,7 +773,7 @@ Partial Class Form_Home
         'Label_EmployeeAddress
         '
         Me.Label_EmployeeAddress.AutoSize = True
-        Me.Label_EmployeeAddress.Location = New System.Drawing.Point(297, 256)
+        Me.Label_EmployeeAddress.Location = New System.Drawing.Point(120, 216)
         Me.Label_EmployeeAddress.Name = "Label_EmployeeAddress"
         Me.Label_EmployeeAddress.Size = New System.Drawing.Size(171, 18)
         Me.Label_EmployeeAddress.TabIndex = 49
@@ -711,7 +782,7 @@ Partial Class Form_Home
         'Label_EmployeeMiddleName
         '
         Me.Label_EmployeeMiddleName.AutoSize = True
-        Me.Label_EmployeeMiddleName.Location = New System.Drawing.Point(297, 225)
+        Me.Label_EmployeeMiddleName.Location = New System.Drawing.Point(120, 190)
         Me.Label_EmployeeMiddleName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label_EmployeeMiddleName.Name = "Label_EmployeeMiddleName"
         Me.Label_EmployeeMiddleName.Size = New System.Drawing.Size(200, 18)
@@ -723,10 +794,10 @@ Partial Class Form_Home
         Me.ListBox_EmployeeList.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.ListBox_EmployeeList.FormattingEnabled = True
         Me.ListBox_EmployeeList.ItemHeight = 18
-        Me.ListBox_EmployeeList.Location = New System.Drawing.Point(11, 4)
+        Me.ListBox_EmployeeList.Location = New System.Drawing.Point(319, 13)
         Me.ListBox_EmployeeList.Margin = New System.Windows.Forms.Padding(4)
         Me.ListBox_EmployeeList.Name = "ListBox_EmployeeList"
-        Me.ListBox_EmployeeList.Size = New System.Drawing.Size(178, 256)
+        Me.ListBox_EmployeeList.Size = New System.Drawing.Size(178, 220)
         Me.ListBox_EmployeeList.TabIndex = 47
         '
         'Panel_Inventory
@@ -745,7 +816,7 @@ Partial Class Form_Home
         Me.Panel_Inventory.Controls.Add(Me.Label13)
         Me.Panel_Inventory.Controls.Add(Me.Label12)
         Me.Panel_Inventory.Controls.Add(Me.Label11)
-        Me.Panel_Inventory.Location = New System.Drawing.Point(194, 15)
+        Me.Panel_Inventory.Location = New System.Drawing.Point(627, 13)
         Me.Panel_Inventory.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel_Inventory.Name = "Panel_Inventory"
         Me.Panel_Inventory.Size = New System.Drawing.Size(442, 511)
@@ -762,7 +833,7 @@ Partial Class Form_Home
         '
         'TextBox_InventoryPrice
         '
-        Me.TextBox_InventoryPrice.Location = New System.Drawing.Point(183, 102)
+        Me.TextBox_InventoryPrice.Location = New System.Drawing.Point(181, 108)
         Me.TextBox_InventoryPrice.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox_InventoryPrice.Name = "TextBox_InventoryPrice"
         Me.TextBox_InventoryPrice.Size = New System.Drawing.Size(180, 24)
@@ -770,7 +841,7 @@ Partial Class Form_Home
         '
         'TextBox_InventoryQuantity
         '
-        Me.TextBox_InventoryQuantity.Location = New System.Drawing.Point(183, 58)
+        Me.TextBox_InventoryQuantity.Location = New System.Drawing.Point(183, 51)
         Me.TextBox_InventoryQuantity.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox_InventoryQuantity.Name = "TextBox_InventoryQuantity"
         Me.TextBox_InventoryQuantity.Size = New System.Drawing.Size(180, 24)
@@ -786,6 +857,7 @@ Partial Class Form_Home
         '
         'Button_InventoryAdd
         '
+        Me.Button_InventoryAdd.ForeColor = System.Drawing.Color.SaddleBrown
         Me.Button_InventoryAdd.Location = New System.Drawing.Point(183, 210)
         Me.Button_InventoryAdd.Margin = New System.Windows.Forms.Padding(4)
         Me.Button_InventoryAdd.Name = "Button_InventoryAdd"
@@ -796,7 +868,8 @@ Partial Class Form_Home
         '
         'Button_InventoryEdit
         '
-        Me.Button_InventoryEdit.Location = New System.Drawing.Point(62, 256)
+        Me.Button_InventoryEdit.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.Button_InventoryEdit.Location = New System.Drawing.Point(58, 256)
         Me.Button_InventoryEdit.Margin = New System.Windows.Forms.Padding(4)
         Me.Button_InventoryEdit.Name = "Button_InventoryEdit"
         Me.Button_InventoryEdit.Size = New System.Drawing.Size(112, 32)
@@ -806,7 +879,8 @@ Partial Class Form_Home
         '
         'Button_InventorySave
         '
-        Me.Button_InventorySave.Location = New System.Drawing.Point(183, 263)
+        Me.Button_InventorySave.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.Button_InventorySave.Location = New System.Drawing.Point(183, 256)
         Me.Button_InventorySave.Margin = New System.Windows.Forms.Padding(4)
         Me.Button_InventorySave.Name = "Button_InventorySave"
         Me.Button_InventorySave.Size = New System.Drawing.Size(112, 32)
@@ -827,6 +901,7 @@ Partial Class Form_Home
         '
         'Button_InventorySearch
         '
+        Me.Button_InventorySearch.ForeColor = System.Drawing.Color.SaddleBrown
         Me.Button_InventorySearch.Location = New System.Drawing.Point(58, 210)
         Me.Button_InventorySearch.Margin = New System.Windows.Forms.Padding(4)
         Me.Button_InventorySearch.Name = "Button_InventorySearch"
@@ -838,20 +913,22 @@ Partial Class Form_Home
         'Label_InventoryDescription
         '
         Me.Label_InventoryDescription.AutoSize = True
-        Me.Label_InventoryDescription.BackColor = System.Drawing.Color.White
+        Me.Label_InventoryDescription.BackColor = System.Drawing.Color.Transparent
         Me.Label_InventoryDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_InventoryDescription.Location = New System.Drawing.Point(196, 143)
+        Me.Label_InventoryDescription.Location = New System.Drawing.Point(187, 79)
         Me.Label_InventoryDescription.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label_InventoryDescription.Name = "Label_InventoryDescription"
-        Me.Label_InventoryDescription.Size = New System.Drawing.Size(0, 18)
+        Me.Label_InventoryDescription.Size = New System.Drawing.Size(185, 18)
         Me.Label_InventoryDescription.TabIndex = 15
+        Me.Label_InventoryDescription.Text = "Label_InventoryDescription"
         '
         'Label14
         '
         Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(44, 143)
+        Me.Label14.ForeColor = System.Drawing.Color.Lime
+        Me.Label14.Location = New System.Drawing.Point(30, 85)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(87, 18)
@@ -863,7 +940,8 @@ Partial Class Form_Home
         Me.Label13.AutoSize = True
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(102, 102)
+        Me.Label13.ForeColor = System.Drawing.Color.Lime
+        Me.Label13.Location = New System.Drawing.Point(64, 115)
         Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(46, 18)
@@ -875,7 +953,8 @@ Partial Class Form_Home
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(72, 58)
+        Me.Label12.ForeColor = System.Drawing.Color.Lime
+        Me.Label12.Location = New System.Drawing.Point(44, 51)
         Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(66, 18)
@@ -887,6 +966,7 @@ Partial Class Form_Home
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.Lime
         Me.Label11.Location = New System.Drawing.Point(9, 19)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
@@ -896,137 +976,30 @@ Partial Class Form_Home
         '
         'Panel_Sales
         '
-        Me.Panel_Sales.Controls.Add(Me.TextBox_InventoryEndDate)
-        Me.Panel_Sales.Controls.Add(Me.TextBox_InventoryStartDate)
+        Me.Panel_Sales.Controls.Add(Me.GroupBox2)
         Me.Panel_Sales.Controls.Add(Me.GroupBox4)
-        Me.Panel_Sales.Controls.Add(Me.Button1)
-        Me.Panel_Sales.Controls.Add(Me.Button2)
-        Me.Panel_Sales.Controls.Add(Me.Button3)
-        Me.Panel_Sales.Controls.Add(Me.Button4)
-        Me.Panel_Sales.Controls.Add(Me.Label16)
-        Me.Panel_Sales.Controls.Add(Me.Label17)
-        Me.Panel_Sales.Controls.Add(Me.Label18)
-        Me.Panel_Sales.Controls.Add(Me.Label19)
-        Me.Panel_Sales.Location = New System.Drawing.Point(190, 48)
+        Me.Panel_Sales.Location = New System.Drawing.Point(29, 6)
         Me.Panel_Sales.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel_Sales.Name = "Panel_Sales"
-        Me.Panel_Sales.Size = New System.Drawing.Size(405, 384)
+        Me.Panel_Sales.Size = New System.Drawing.Size(405, 600)
         Me.Panel_Sales.TabIndex = 21
-        '
-        'TextBox_InventoryEndDate
-        '
-        Me.TextBox_InventoryEndDate.Location = New System.Drawing.Point(196, 68)
-        Me.TextBox_InventoryEndDate.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox_InventoryEndDate.Name = "TextBox_InventoryEndDate"
-        Me.TextBox_InventoryEndDate.Size = New System.Drawing.Size(180, 24)
-        Me.TextBox_InventoryEndDate.TabIndex = 23
-        '
-        'TextBox_InventoryStartDate
-        '
-        Me.TextBox_InventoryStartDate.Location = New System.Drawing.Point(196, 25)
-        Me.TextBox_InventoryStartDate.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox_InventoryStartDate.Name = "TextBox_InventoryStartDate"
-        Me.TextBox_InventoryStartDate.Size = New System.Drawing.Size(180, 24)
-        Me.TextBox_InventoryStartDate.TabIndex = 22
         '
         'GroupBox4
         '
-        Me.GroupBox4.Location = New System.Drawing.Point(63, 314)
+        Me.GroupBox4.Controls.Add(Me.DateTimePicker_SalesEndDate)
+        Me.GroupBox4.Controls.Add(Me.DateTimePicker_SalesStartDate)
+        Me.GroupBox4.Controls.Add(Me.Label18)
+        Me.GroupBox4.Controls.Add(Me.Label19)
+        Me.GroupBox4.Controls.Add(Me.Label16)
+        Me.GroupBox4.Controls.Add(Me.Label6)
+        Me.GroupBox4.Location = New System.Drawing.Point(21, 14)
         Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox4.Size = New System.Drawing.Size(300, 138)
+        Me.GroupBox4.Size = New System.Drawing.Size(349, 169)
         Me.GroupBox4.TabIndex = 17
         Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "GroupBox4"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(266, 194)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(112, 32)
-        Me.Button1.TabIndex = 20
-        Me.Button1.Text = "Add"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(144, 234)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(112, 32)
-        Me.Button2.TabIndex = 19
-        Me.Button2.Text = "Edit"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(266, 234)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(112, 32)
-        Me.Button3.TabIndex = 18
-        Me.Button3.Text = "Save"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(144, 194)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(112, 32)
-        Me.Button4.TabIndex = 17
-        Me.Button4.Text = "Search"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.BackColor = System.Drawing.Color.Transparent
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(74, 143)
-        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(40, 18)
-        Me.Label16.TabIndex = 14
-        Me.Label16.Text = "uuuu"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.BackColor = System.Drawing.Color.Transparent
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(22, 102)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(74, 18)
-        Me.Label17.TabIndex = 13
-        Me.Label17.Text = "UUUUUU"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.BackColor = System.Drawing.Color.Transparent
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(22, 66)
-        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(73, 18)
-        Me.Label18.TabIndex = 12
-        Me.Label18.Text = "End Date:"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.BackColor = System.Drawing.Color.Transparent
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(15, 25)
-        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(78, 18)
-        Me.Label19.TabIndex = 11
-        Me.Label19.Text = "Start Date:"
+        Me.GroupBox4.Text = "GroupBox_SalesDate"
         '
         'OpenFileDialog_ChooseEmployeePicture
         '
@@ -1037,10 +1010,10 @@ Partial Class Form_Home
         '
         Me.B5_LogO.BackgroundImage = Global.Water.My.Resources.Resources.power
         Me.B5_LogO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.B5_LogO.Location = New System.Drawing.Point(-2, 521)
+        Me.B5_LogO.Location = New System.Drawing.Point(13, 550)
         Me.B5_LogO.Margin = New System.Windows.Forms.Padding(4)
         Me.B5_LogO.Name = "B5_LogO"
-        Me.B5_LogO.Size = New System.Drawing.Size(194, 102)
+        Me.B5_LogO.Size = New System.Drawing.Size(74, 63)
         Me.B5_LogO.TabIndex = 10
         Me.B5_LogO.Text = "Log-Out"
         Me.B5_LogO.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -1050,10 +1023,10 @@ Partial Class Form_Home
         '
         Me.B4_Sales.BackgroundImage = Global.Water.My.Resources.Resources.sales
         Me.B4_Sales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.B4_Sales.Location = New System.Drawing.Point(-2, 398)
+        Me.B4_Sales.Location = New System.Drawing.Point(13, 294)
         Me.B4_Sales.Margin = New System.Windows.Forms.Padding(4)
         Me.B4_Sales.Name = "B4_Sales"
-        Me.B4_Sales.Size = New System.Drawing.Size(194, 124)
+        Me.B4_Sales.Size = New System.Drawing.Size(110, 91)
         Me.B4_Sales.TabIndex = 9
         Me.B4_Sales.Text = "Sales"
         Me.B4_Sales.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -1063,10 +1036,10 @@ Partial Class Form_Home
         '
         Me.B3_Inventory.BackgroundImage = Global.Water.My.Resources.Resources.inv
         Me.B3_Inventory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.B3_Inventory.Location = New System.Drawing.Point(-2, 259)
+        Me.B3_Inventory.Location = New System.Drawing.Point(13, 184)
         Me.B3_Inventory.Margin = New System.Windows.Forms.Padding(4)
         Me.B3_Inventory.Name = "B3_Inventory"
-        Me.B3_Inventory.Size = New System.Drawing.Size(194, 144)
+        Me.B3_Inventory.Size = New System.Drawing.Size(110, 102)
         Me.B3_Inventory.TabIndex = 5
         Me.B3_Inventory.Text = "Inventory"
         Me.B3_Inventory.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -1076,10 +1049,10 @@ Partial Class Form_Home
         '
         Me.B2_Employee.BackgroundImage = Global.Water.My.Resources.Resources.emp
         Me.B2_Employee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.B2_Employee.Location = New System.Drawing.Point(-1, 131)
+        Me.B2_Employee.Location = New System.Drawing.Point(13, 94)
         Me.B2_Employee.Margin = New System.Windows.Forms.Padding(4)
         Me.B2_Employee.Name = "B2_Employee"
-        Me.B2_Employee.Size = New System.Drawing.Size(194, 128)
+        Me.B2_Employee.Size = New System.Drawing.Size(110, 85)
         Me.B2_Employee.TabIndex = 2
         Me.B2_Employee.Text = "Employee"
         Me.B2_Employee.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -1090,14 +1063,298 @@ Partial Class Form_Home
         Me.B1_Transaction.BackgroundImage = Global.Water.My.Resources.Resources.home
         Me.B1_Transaction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.B1_Transaction.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.B1_Transaction.Location = New System.Drawing.Point(-2, -8)
+        Me.B1_Transaction.Location = New System.Drawing.Point(13, 4)
         Me.B1_Transaction.Margin = New System.Windows.Forms.Padding(4)
         Me.B1_Transaction.Name = "B1_Transaction"
-        Me.B1_Transaction.Size = New System.Drawing.Size(194, 141)
+        Me.B1_Transaction.Size = New System.Drawing.Size(110, 84)
         Me.B1_Transaction.TabIndex = 1
         Me.B1_Transaction.Text = "Transaction"
         Me.B1_Transaction.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.B1_Transaction.UseVisualStyleBackColor = True
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.BackColor = System.Drawing.Color.White
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.Label16.Location = New System.Drawing.Point(8, 24)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(39, 18)
+        Me.Label16.TabIndex = 12
+        Me.Label16.Text = "Date"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.BackColor = System.Drawing.Color.Transparent
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(8, 58)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(78, 18)
+        Me.Label19.TabIndex = 13
+        Me.Label19.Text = "Start Date:"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.BackColor = System.Drawing.Color.Transparent
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(8, 91)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(73, 18)
+        Me.Label18.TabIndex = 14
+        Me.Label18.Text = "End Date:"
+        '
+        'DateTimePicker_SalesStartDate
+        '
+        Me.DateTimePicker_SalesStartDate.Location = New System.Drawing.Point(86, 55)
+        Me.DateTimePicker_SalesStartDate.Name = "DateTimePicker_SalesStartDate"
+        Me.DateTimePicker_SalesStartDate.Size = New System.Drawing.Size(200, 24)
+        Me.DateTimePicker_SalesStartDate.TabIndex = 15
+        '
+        'DateTimePicker_SalesEndDate
+        '
+        Me.DateTimePicker_SalesEndDate.Location = New System.Drawing.Point(88, 90)
+        Me.DateTimePicker_SalesEndDate.Name = "DateTimePicker_SalesEndDate"
+        Me.DateTimePicker_SalesEndDate.Size = New System.Drawing.Size(200, 24)
+        Me.DateTimePicker_SalesEndDate.TabIndex = 16
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.GroupBox1)
+        Me.GroupBox2.Controls.Add(Me.DataGridView1)
+        Me.GroupBox2.Location = New System.Drawing.Point(15, 224)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Size = New System.Drawing.Size(375, 152)
+        Me.GroupBox2.TabIndex = 21
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "GroupBox_SalesProduct"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(4, 21)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(367, 127)
+        Me.DataGridView1.TabIndex = 0
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(41, 408)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(8, 22)
+        Me.DataGridView2.TabIndex = 17
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.DataGridView3)
+        Me.GroupBox1.Location = New System.Drawing.Point(15, 78)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Size = New System.Drawing.Size(375, 215)
+        Me.GroupBox1.TabIndex = 22
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "GroupBox_Transaction"
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView3.Location = New System.Drawing.Point(4, 21)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.Size = New System.Drawing.Size(367, 190)
+        Me.DataGridView3.TabIndex = 0
+        '
+        'Panel_MaintenaceProductSales
+        '
+        Me.Panel_MaintenaceProductSales.Controls.Add(Me.Label35)
+        Me.Panel_MaintenaceProductSales.Controls.Add(Me.Label34)
+        Me.Panel_MaintenaceProductSales.Controls.Add(Me.GroupBox5)
+        Me.Panel_MaintenaceProductSales.Controls.Add(Me.TextBox_MaintenanceProdPrice)
+        Me.Panel_MaintenaceProductSales.Controls.Add(Me.TextBox_MaintenanceProdQuantity)
+        Me.Panel_MaintenaceProductSales.Controls.Add(Me.TextBox_MaintenanceProdName)
+        Me.Panel_MaintenaceProductSales.Controls.Add(Me.Label33)
+        Me.Panel_MaintenaceProductSales.Controls.Add(Me.Label32)
+        Me.Panel_MaintenaceProductSales.Controls.Add(Me.Label31)
+        Me.Panel_MaintenaceProductSales.Controls.Add(Me.Button_ProductMaintenanceDelete)
+        Me.Panel_MaintenaceProductSales.Controls.Add(Me.Button_ProductMaintenanceEdit)
+        Me.Panel_MaintenaceProductSales.Controls.Add(Me.Button_ProductMaintenanceAdd)
+        Me.Panel_MaintenaceProductSales.Controls.Add(Me.GroupBox_Product)
+        Me.Panel_MaintenaceProductSales.Controls.Add(Me.Label17)
+        Me.Panel_MaintenaceProductSales.Location = New System.Drawing.Point(146, 4)
+        Me.Panel_MaintenaceProductSales.Name = "Panel_MaintenaceProductSales"
+        Me.Panel_MaintenaceProductSales.Size = New System.Drawing.Size(418, 586)
+        Me.Panel_MaintenaceProductSales.TabIndex = 14
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Gill Sans MT", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.Lime
+        Me.Label17.Location = New System.Drawing.Point(110, 5)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(225, 30)
+        Me.Label17.TabIndex = 0
+        Me.Label17.Text = "Product Maintenance"
+        '
+        'GroupBox_Product
+        '
+        Me.GroupBox_Product.Controls.Add(Me.DataGridView4)
+        Me.GroupBox_Product.Location = New System.Drawing.Point(22, 78)
+        Me.GroupBox_Product.Name = "GroupBox_Product"
+        Me.GroupBox_Product.Size = New System.Drawing.Size(384, 100)
+        Me.GroupBox_Product.TabIndex = 1
+        Me.GroupBox_Product.TabStop = False
+        Me.GroupBox_Product.Text = "GroupBox_Product"
+        '
+        'DataGridView4
+        '
+        Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView4.Location = New System.Drawing.Point(3, 20)
+        Me.DataGridView4.Name = "DataGridView4"
+        Me.DataGridView4.Size = New System.Drawing.Size(378, 77)
+        Me.DataGridView4.TabIndex = 0
+        '
+        'Button_ProductMaintenanceAdd
+        '
+        Me.Button_ProductMaintenanceAdd.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.Button_ProductMaintenanceAdd.Location = New System.Drawing.Point(325, 195)
+        Me.Button_ProductMaintenanceAdd.Name = "Button_ProductMaintenanceAdd"
+        Me.Button_ProductMaintenanceAdd.Size = New System.Drawing.Size(75, 23)
+        Me.Button_ProductMaintenanceAdd.TabIndex = 2
+        Me.Button_ProductMaintenanceAdd.Text = "Add"
+        Me.Button_ProductMaintenanceAdd.UseVisualStyleBackColor = True
+        '
+        'Button_ProductMaintenanceEdit
+        '
+        Me.Button_ProductMaintenanceEdit.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.Button_ProductMaintenanceEdit.Location = New System.Drawing.Point(325, 224)
+        Me.Button_ProductMaintenanceEdit.Name = "Button_ProductMaintenanceEdit"
+        Me.Button_ProductMaintenanceEdit.Size = New System.Drawing.Size(75, 23)
+        Me.Button_ProductMaintenanceEdit.TabIndex = 3
+        Me.Button_ProductMaintenanceEdit.Text = "Edit"
+        Me.Button_ProductMaintenanceEdit.UseVisualStyleBackColor = True
+        '
+        'Button_ProductMaintenanceDelete
+        '
+        Me.Button_ProductMaintenanceDelete.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.Button_ProductMaintenanceDelete.Location = New System.Drawing.Point(325, 253)
+        Me.Button_ProductMaintenanceDelete.Name = "Button_ProductMaintenanceDelete"
+        Me.Button_ProductMaintenanceDelete.Size = New System.Drawing.Size(75, 23)
+        Me.Button_ProductMaintenanceDelete.TabIndex = 4
+        Me.Button_ProductMaintenanceDelete.Text = "Delete"
+        Me.Button_ProductMaintenanceDelete.UseVisualStyleBackColor = True
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.ForeColor = System.Drawing.Color.Lime
+        Me.Label31.Location = New System.Drawing.Point(39, 203)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(104, 18)
+        Me.Label31.TabIndex = 5
+        Me.Label31.Text = "Product Name"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.ForeColor = System.Drawing.Color.Lime
+        Me.Label32.Location = New System.Drawing.Point(81, 233)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(62, 18)
+        Me.Label32.TabIndex = 6
+        Me.Label32.Text = "Quantity"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.ForeColor = System.Drawing.Color.Lime
+        Me.Label33.Location = New System.Drawing.Point(101, 260)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(42, 18)
+        Me.Label33.TabIndex = 7
+        Me.Label33.Text = "Price"
+        '
+        'TextBox_MaintenanceProdName
+        '
+        Me.TextBox_MaintenanceProdName.Location = New System.Drawing.Point(149, 197)
+        Me.TextBox_MaintenanceProdName.Name = "TextBox_MaintenanceProdName"
+        Me.TextBox_MaintenanceProdName.Size = New System.Drawing.Size(153, 24)
+        Me.TextBox_MaintenanceProdName.TabIndex = 8
+        '
+        'TextBox_MaintenanceProdQuantity
+        '
+        Me.TextBox_MaintenanceProdQuantity.Location = New System.Drawing.Point(149, 225)
+        Me.TextBox_MaintenanceProdQuantity.Name = "TextBox_MaintenanceProdQuantity"
+        Me.TextBox_MaintenanceProdQuantity.Size = New System.Drawing.Size(153, 24)
+        Me.TextBox_MaintenanceProdQuantity.TabIndex = 9
+        '
+        'TextBox_MaintenanceProdPrice
+        '
+        Me.TextBox_MaintenanceProdPrice.Location = New System.Drawing.Point(149, 255)
+        Me.TextBox_MaintenanceProdPrice.Name = "TextBox_MaintenanceProdPrice"
+        Me.TextBox_MaintenanceProdPrice.Size = New System.Drawing.Size(153, 24)
+        Me.TextBox_MaintenanceProdPrice.TabIndex = 10
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.DataGridView5)
+        Me.GroupBox5.Location = New System.Drawing.Point(19, 337)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(381, 100)
+        Me.GroupBox5.TabIndex = 11
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "GroupBox_Sales"
+        '
+        'DataGridView5
+        '
+        Me.DataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView5.Location = New System.Drawing.Point(3, 20)
+        Me.DataGridView5.Name = "DataGridView5"
+        Me.DataGridView5.Size = New System.Drawing.Size(375, 77)
+        Me.DataGridView5.TabIndex = 0
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.BackColor = System.Drawing.Color.White
+        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(30, 299)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(61, 24)
+        Me.Label34.TabIndex = 12
+        Me.Label34.Text = "Sales"
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.BackColor = System.Drawing.Color.White
+        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.Location = New System.Drawing.Point(30, 51)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(92, 24)
+        Me.Label35.TabIndex = 13
+        Me.Label35.Text = "Products"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(12, 399)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(128, 92)
+        Me.Button1.TabIndex = 15
+        Me.Button1.Text = "MAINTENANCE"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Form_Home
         '
@@ -1107,15 +1364,16 @@ Partial Class Form_Home
         Me.BackgroundImage = Global.Water.My.Resources.Resources.bg
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1334, 626)
-        Me.Controls.Add(Me.Panel_Employee)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Panel_MaintenaceProductSales)
         Me.Controls.Add(Me.Panel_Transaction)
+        Me.Controls.Add(Me.Panel_Employee)
         Me.Controls.Add(Me.Panel_Inventory)
         Me.Controls.Add(Me.B5_LogO)
         Me.Controls.Add(Me.B4_Sales)
         Me.Controls.Add(Me.B3_Inventory)
         Me.Controls.Add(Me.B2_Employee)
         Me.Controls.Add(Me.B1_Transaction)
-        Me.Controls.Add(Me.Panel_Sales)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Margin = New System.Windows.Forms.Padding(4)
@@ -1133,7 +1391,19 @@ Partial Class Form_Home
         Me.Panel_Inventory.ResumeLayout(False)
         Me.Panel_Inventory.PerformLayout()
         Me.Panel_Sales.ResumeLayout(False)
-        Me.Panel_Sales.PerformLayout()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel_MaintenaceProductSales.ResumeLayout(False)
+        Me.Panel_MaintenaceProductSales.PerformLayout()
+        Me.GroupBox_Product.ResumeLayout(False)
+        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox5.ResumeLayout(False)
+        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1158,8 +1428,7 @@ Partial Class Form_Home
     Friend WithEvents Label_Description As System.Windows.Forms.Label
     Friend WithEvents Label_d As System.Windows.Forms.Label
     Friend WithEvents TextBox_Name As System.Windows.Forms.TextBox
-    Friend WithEvents Label_Prize As System.Windows.Forms.Label
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label_TransactionPrize As System.Windows.Forms.Label
     Friend WithEvents Button_InventoryAdd As System.Windows.Forms.Button
     Friend WithEvents Button_InventoryEdit As System.Windows.Forms.Button
     Friend WithEvents Button_InventorySave As System.Windows.Forms.Button
@@ -1170,21 +1439,11 @@ Partial Class Form_Home
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Panel_Sales As System.Windows.Forms.Panel
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Label16 As System.Windows.Forms.Label
-    Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents Label18 As System.Windows.Forms.Label
-    Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents TextBox_InventoryPrice As System.Windows.Forms.TextBox
     Friend WithEvents TextBox_InventoryQuantity As System.Windows.Forms.TextBox
     Friend WithEvents TextBox_InventoryProductName As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox_InventoryEndDate As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox_InventoryStartDate As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents Label_TransactionNum As System.Windows.Forms.Label
     Friend WithEvents Panel_EmployeeManager As System.Windows.Forms.Panel
@@ -1229,4 +1488,34 @@ Partial Class Form_Home
     Friend WithEvents ComboBox_Usertype As System.Windows.Forms.ComboBox
     Friend WithEvents Label29 As System.Windows.Forms.Label
     Friend WithEvents TextBox_Username As System.Windows.Forms.TextBox
+    Friend WithEvents Label30 As System.Windows.Forms.Label
+    Friend WithEvents Label_EmployeeUsertype As System.Windows.Forms.Label
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents DateTimePicker_SalesEndDate As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DateTimePicker_SalesStartDate As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents DataGridView3 As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents Panel_MaintenaceProductSales As System.Windows.Forms.Panel
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Button_ProductMaintenanceDelete As System.Windows.Forms.Button
+    Friend WithEvents Button_ProductMaintenanceEdit As System.Windows.Forms.Button
+    Friend WithEvents Button_ProductMaintenanceAdd As System.Windows.Forms.Button
+    Friend WithEvents GroupBox_Product As System.Windows.Forms.GroupBox
+    Friend WithEvents DataGridView4 As System.Windows.Forms.DataGridView
+    Friend WithEvents TextBox_MaintenanceProdPrice As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox_MaintenanceProdQuantity As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox_MaintenanceProdName As System.Windows.Forms.TextBox
+    Friend WithEvents Label33 As System.Windows.Forms.Label
+    Friend WithEvents Label32 As System.Windows.Forms.Label
+    Friend WithEvents Label31 As System.Windows.Forms.Label
+    Friend WithEvents Label35 As System.Windows.Forms.Label
+    Friend WithEvents Label34 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
+    Friend WithEvents DataGridView5 As System.Windows.Forms.DataGridView
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

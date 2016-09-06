@@ -19,7 +19,7 @@ Public Class Form_Home
     End Sub
 
     Private Sub B1_Transaction_Click() Handles B1_Transaction.Click
-        
+
         ListBox_EmployeeList.ClearSelected()
         Panel_Employee.Hide()
         Panel_Inventory.Hide()
@@ -27,7 +27,7 @@ Public Class Form_Home
         Panel_Sales.Hide()
 
 
-        
+
     End Sub
 
     Private Sub B2_Employee_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles B2_Employee.Click
@@ -123,7 +123,7 @@ Public Class Form_Home
                 Try
                     MySQLConn.Open()
                     If EmployeeAction = "edit" Then
-                        query = "update logintable set lname=@lastname, fname=@firstname, mname=@middlename, address=@address, contact=@contact, email=@email, password=sha2(@password, 512), usertype=@usertype, image=@image"
+                        query = "update logintable set lname=@lastname, fname=@firstname, mname=@middlename, address=@address, contact=@contact, email=@email, password=sha2(@password, 512), usertype=@usertype, image=@image WHERE username=@usernametoedit"
                         comm = New MySqlCommand(query, MySQLConn)
                         comm.Parameters.AddWithValue("lastname", TextBox_LastName.Text)
                         comm.Parameters.AddWithValue("firstname", TextBox_FirstName.Text)
@@ -134,9 +134,10 @@ Public Class Form_Home
                         comm.Parameters.AddWithValue("password", TextBox_EmployeePassword.Text)
                         comm.Parameters.AddWithValue("usertype", ComboBox_Usertype.Text)
                         comm.Parameters.AddWithValue("image", arrImage)
+                        comm.Parameters.AddWithValue("usernametoedit", UsernameEdit)
                         message = "Updated"
                     Else
-                        query = "INSERT INTO logintable values(@lastname, @firstname, @middlename, @address, @contact, @email, @username,   sha2(@password, 512), @usertype, @image)"
+                        query = "INSERT INTO logintable values(@firstname, @middlename, @lastname, @address, @contact, @email, @username,   sha2(@password, 512), @usertype, @image)"
                         comm = New MySqlCommand(query, MySQLConn)
                         comm.Parameters.AddWithValue("lastname", TextBox_LastName.Text)
                         comm.Parameters.AddWithValue("firstname", TextBox_FirstName.Text)
@@ -169,7 +170,7 @@ Public Class Form_Home
 
             End If
         End If
-        
+
     End Sub
 
     Private Sub Button_CancelEmployee_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button_CancelEmployee.Click
@@ -198,6 +199,7 @@ Public Class Form_Home
                 Label_EmployeeAddress.Text = reader.GetString("address")
                 Label_EmployeeContact.Text = reader.GetString("contact")
                 Label_EmployeeEmail.Text = reader.GetString("email")
+                Label_EmployeeUsertype.Text = reader.GetString("usertype")
                 arrImage = reader.Item("image")
                 Dim mstream As New System.IO.MemoryStream(arrImage)
                 PictureBox_EmployeePicture.Image = Image.FromStream(mstream)
@@ -284,12 +286,17 @@ Public Class Form_Home
 
         End If
 
-        
+
     End Sub
 
     Private Sub Form_Home_MaximizedBoundsChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.MaximizedBoundsChanged
 
         Form_LogIn.Show()
+    End Sub
+
+    Private Sub B5_LogO_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles B5_LogO.Click
+        Form_LogIn.Show()
+        Me.Hide()
     End Sub
 End Class
 
