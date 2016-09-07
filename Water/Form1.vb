@@ -16,6 +16,7 @@ Public Class Form_Home
         Panel_Transaction.Hide()
         Panel_Sales.Hide()
         B1_Transaction_Click()
+        transac_table()
     End Sub
 
     Private Sub B1_Transaction_Click() Handles B1_Transaction.Click
@@ -25,6 +26,8 @@ Public Class Form_Home
         Panel_Inventory.Hide()
         Panel_Transaction.Show()
         Panel_Sales.Hide()
+        Panel_MaintenaceProductSales.Hide()
+
 
 
 
@@ -54,7 +57,14 @@ Public Class Form_Home
             Load_Employees()
         Else
             MsgBox("Sorry, you do not have the privilege to view this page", MsgBoxStyle.Critical, SystemTitle)
+            Panel_Employee.Hide()
+            Panel_Inventory.Hide()
+            Panel_Transaction.Hide()
+            Panel_Sales.Hide()
+            Panel_MaintenaceProductSales.Hide()
         End If
+
+
 
 
     End Sub
@@ -63,17 +73,74 @@ Public Class Form_Home
 
         ListBox_EmployeeList.ClearSelected()
 
-        Panel_Employee.Hide()
-        Panel_Inventory.Show()
-        Panel_Transaction.Hide()
-        Panel_Sales.Hide()
+        If usertype = "Owner" Then
+            Panel_Employee.Hide()
+            Panel_Inventory.Show()
+            Panel_Transaction.Hide()
+            Panel_Sales.Hide()
+            Panel_MaintenaceProductSales.Hide()
+
+
+            Label_EmployeeLastname.Text = ""
+            Label_EmployeeFirstname.Text = ""
+            Label_EmployeeMiddleName.Text = ""
+            Label_EmployeeAddress.Text = ""
+            Label_EmployeeEmail.Text = ""
+            Label_EmployeeContact.Text = ""
+
+            Panel_EmployeeManager.Hide()
+            Panel_EmployeeMain.Show()
+
+
+            Load_Employees()
+        Else
+            MsgBox("Sorry, you do not have the privilege to view this page", MsgBoxStyle.Critical, SystemTitle)
+            Panel_Employee.Hide()
+            Panel_Inventory.Hide()
+            Panel_Transaction.Hide()
+            Panel_Sales.Hide()
+            Panel_MaintenaceProductSales.Hide()
+        End If
+
+
     End Sub
 
     Private Sub B4_Sales_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles B4_Sales.Click
-        Panel_Employee.Hide()
-        Panel_Inventory.Hide()
-        Panel_Transaction.Hide()
-        Panel_Sales.Show()
+
+        ListBox_EmployeeList.ClearSelected()
+
+        If usertype = "Owner" Then
+            Panel_Employee.Hide()
+            Panel_Inventory.Hide()
+            Panel_Transaction.Hide()
+            Panel_Sales.Show()
+            Panel_MaintenaceProductSales.Hide()
+
+
+            Label_EmployeeLastname.Text = ""
+            Label_EmployeeFirstname.Text = ""
+            Label_EmployeeMiddleName.Text = ""
+            Label_EmployeeAddress.Text = ""
+            Label_EmployeeEmail.Text = ""
+            Label_EmployeeContact.Text = ""
+
+            Panel_EmployeeManager.Hide()
+            Panel_EmployeeMain.Show()
+
+
+            Load_Employees()
+        Else
+            MsgBox("Sorry, you do not have the privilege to view this page", MsgBoxStyle.Critical, SystemTitle)
+            Panel_Employee.Hide()
+            Panel_Inventory.Hide()
+            Panel_Transaction.Hide()
+            Panel_Sales.Hide()
+            Panel_MaintenaceProductSales.Hide()
+
+        End If
+
+
+
     End Sub
     Public Sub Load_Employees()
         If MySQLConn.State = ConnectionState.Open Then
@@ -295,9 +362,134 @@ Public Class Form_Home
     End Sub
 
     Private Sub B5_LogO_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles B5_LogO.Click
-        Form_LogIn.Show()
-        Me.Hide()
+
+        Dim p As Integer
+
+        p = MsgBox("Are you sure you want to log out?", MsgBoxStyle.YesNo, "Alkaline Water Store")
+
+        If p = 6 Then
+            Me.Hide()
+            Form_LogIn.Show()
+
+        End If
+
     End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+        ListBox_EmployeeList.ClearSelected()
+
+        If usertype = "Owner" Then
+            Panel_Employee.Hide()
+            Panel_Inventory.Hide()
+            Panel_Transaction.Hide()
+            Panel_Sales.Hide()
+            Panel_MaintenaceProductSales.Show()
+
+
+            Label_EmployeeLastname.Text = ""
+            Label_EmployeeFirstname.Text = ""
+            Label_EmployeeMiddleName.Text = ""
+            Label_EmployeeAddress.Text = ""
+            Label_EmployeeEmail.Text = ""
+            Label_EmployeeContact.Text = ""
+
+            Panel_EmployeeManager.Hide()
+            Panel_EmployeeMain.Show()
+
+
+            Load_Employees()
+        Else
+            MsgBox("Sorry, you do not have the privilege to view this page", MsgBoxStyle.Critical, SystemTitle)
+            Panel_Employee.Hide()
+            Panel_Inventory.Hide()
+            Panel_Transaction.Hide()
+            Panel_Sales.Hide()
+            Panel_MaintenaceProductSales.Hide()
+
+        End If
+
+
+    End Sub
+
+    Private Sub B1_Transaction_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles B1_Transaction.Click
+        transac_table()
+    End Sub
+
+    Private Sub Button_Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button_Cancel.Click
+        Label_TransactionNum.Text = ""
+        TextBox_Name.Text = ""
+        ComboBox_Products.Text = ""
+        ComboBox_Refill.Text = ""
+        Label_TransactionDescription.Text = ""
+        Label_TransactionPrize.Text = ""
+
+    End Sub
+
+    Private Sub Button_Ok_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button_Ok.Click
+        MySQLConn.ConnectionString = connstring
+
+        Try
+            Dim query As String
+
+            MySQLConn.Open()
+            query = "insert into `transaction_table` values ( '" & TextBox_Name.Text & "', " & ComboBox_Products.Text & "' , " & ComboBox_Refill.Text & "')"
+            comm = New MySqlCommand(query, MySQLConn)
+            reader = comm.ExecuteReader
+            MySQLConn.Close()
+            MsgBox(" SUCCESS ")
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        End Try
+
+        MySQLConn.Close()
+    End Sub
+
+    Public Sub transac_table()
+        MySQLConn = New MySqlConnection
+        MySQLConn.ConnectionString = connstring
+
+        Dim sda As New MySqlDataAdapter
+        Dim dbdataset As New DataTable
+        Dim bsource As New BindingSource
+        Dim query As String
+
+        If MySQLConn.state = ConnectionState.Open Then
+            MySQLConn.Close()
+
+
+        End If
+
+        Try
+            MySQLConn.open()
+            query = "Select CustomerName as'Customer Name' , Product as'Product', Refill as 'Refill', Description as'Description' from transaction_table"
+
+            comm = New MySqlCommand(query, MySQLConn)
+            sda.SelectCommand = comm
+            sda.Fill(dbdataset)
+            bsource.DataSource = dbdataset
+            DataGridView_Transaction.DataSource = bsource
+            DataGridView_Transaction.ReadOnly = True
+            sda.Update(dbdataset)
+            MySQLConn.Close()
+
+
+        Catch ex As Exception
+
+            MessageBox.Show("error " + ex.Message)
+
+        Finally
+            MySQLConn.Dispose()
+
+
+        End Try
+
+
+
+    End Sub
+
 End Class
 
 

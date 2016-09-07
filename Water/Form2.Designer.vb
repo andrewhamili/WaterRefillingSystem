@@ -134,6 +134,7 @@ Partial Class Form_LogIn
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "Form_LogIn"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Log-In"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

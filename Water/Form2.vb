@@ -42,6 +42,19 @@ Class Form_LogIn
         
     End Sub
 
+    Private Sub Label3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub Button_Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button_Cancel.Click
+
+        End
+
+    End Sub
+
+    Private Sub Form_LogIn_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
 
 
