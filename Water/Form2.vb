@@ -53,7 +53,8 @@ Class Form_LogIn
     End Sub
 
     Private Sub Form_LogIn_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        AcceptButton = Button_Go
+        CancelButton = Button_Cancel
     End Sub
 End Class
 

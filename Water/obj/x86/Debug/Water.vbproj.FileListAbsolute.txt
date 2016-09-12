@@ -8,3 +8,17 @@ C:\Users\Genelyne\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Wat
 C:\Users\Genelyne\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.exe
 C:\Users\Genelyne\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.xml
 C:\Users\Genelyne\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.pdb
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\bin\Debug\Water.exe
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\bin\Debug\Water.pdb
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\bin\Debug\Water.xml
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.Control_Employee.resources
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.Control_Maintenance.resources
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.Control_Sales.resources
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.Control_Transaction.resources
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.Form_Home.resources
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.Form_LogIn.resources
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.Resources.resources
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.vbproj.GenerateResource.Cache
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.exe
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.xml
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.pdb
