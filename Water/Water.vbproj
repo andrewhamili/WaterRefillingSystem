@@ -79,12 +79,6 @@
     <Compile Include="Control_Employee.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Control_Maintenance.Designer.vb">
-      <DependentUpon>Control_Maintenance.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Control_Maintenance.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Control_Sales.Designer.vb">
       <DependentUpon>Control_Sales.vb</DependentUpon>
     </Compile>
@@ -130,9 +124,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Control_Employee.resx">
       <DependentUpon>Control_Employee.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Control_Maintenance.resx">
-      <DependentUpon>Control_Maintenance.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control_Sales.resx">
       <DependentUpon>Control_Sales.vb</DependentUpon>

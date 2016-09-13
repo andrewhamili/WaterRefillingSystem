@@ -43,17 +43,17 @@ Partial Class Control_Sales
         Me.Panel_Sales.Location = New System.Drawing.Point(4, 4)
         Me.Panel_Sales.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel_Sales.Name = "Panel_Sales"
-        Me.Panel_Sales.Size = New System.Drawing.Size(405, 600)
+        Me.Panel_Sales.Size = New System.Drawing.Size(1003, 600)
         Me.Panel_Sales.TabIndex = 23
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.DataGridView3)
-        Me.GroupBox1.Location = New System.Drawing.Point(21, 214)
+        Me.GroupBox1.Location = New System.Drawing.Point(21, 162)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(375, 215)
+        Me.GroupBox1.Size = New System.Drawing.Size(860, 325)
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Transactions"
@@ -64,7 +64,7 @@ Partial Class Control_Sales
         Me.DataGridView3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView3.Location = New System.Drawing.Point(4, 17)
         Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.Size = New System.Drawing.Size(367, 194)
+        Me.DataGridView3.Size = New System.Drawing.Size(852, 304)
         Me.DataGridView3.TabIndex = 0
         '
         'GroupBox4
@@ -77,14 +77,14 @@ Partial Class Control_Sales
         Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox4.Size = New System.Drawing.Size(349, 169)
+        Me.GroupBox4.Size = New System.Drawing.Size(860, 115)
         Me.GroupBox4.TabIndex = 17
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Date Range"
         '
         'DateTimePicker_SalesEndDate
         '
-        Me.DateTimePicker_SalesEndDate.Location = New System.Drawing.Point(88, 90)
+        Me.DateTimePicker_SalesEndDate.Location = New System.Drawing.Point(419, 58)
         Me.DateTimePicker_SalesEndDate.Name = "DateTimePicker_SalesEndDate"
         Me.DateTimePicker_SalesEndDate.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker_SalesEndDate.TabIndex = 16
@@ -101,7 +101,7 @@ Partial Class Control_Sales
         Me.Label18.AutoSize = True
         Me.Label18.BackColor = System.Drawing.Color.Transparent
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(8, 91)
+        Me.Label18.Location = New System.Drawing.Point(339, 58)
         Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(73, 18)
@@ -124,9 +124,10 @@ Partial Class Control_Sales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Controls.Add(Me.Panel_Sales)
         Me.Name = "Control_Sales"
-        Me.Size = New System.Drawing.Size(424, 603)
+        Me.Size = New System.Drawing.Size(1007, 603)
         Me.Panel_Sales.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()

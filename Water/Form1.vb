@@ -35,6 +35,10 @@ Public Class Form_Home
         Control_Employee1.Hide()
         Control_Transaction1.Hide()
     End Sub
+
+    Private Sub Control_Transaction1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
 End Class
 
 

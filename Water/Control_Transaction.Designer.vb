@@ -45,7 +45,7 @@ Partial Class Control_Transaction
         'Label_TotalPrice
         '
         Me.Label_TotalPrice.AutoSize = True
-        Me.Label_TotalPrice.Location = New System.Drawing.Point(994, 236)
+        Me.Label_TotalPrice.Location = New System.Drawing.Point(532, 254)
         Me.Label_TotalPrice.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label_TotalPrice.Name = "Label_TotalPrice"
         Me.Label_TotalPrice.Size = New System.Drawing.Size(66, 18)
@@ -55,7 +55,7 @@ Partial Class Control_Transaction
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(994, 200)
+        Me.Label4.Location = New System.Drawing.Point(445, 254)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(79, 18)
@@ -64,16 +64,16 @@ Partial Class Control_Transaction
         '
         'TextBox_CustomerName
         '
-        Me.TextBox_CustomerName.Location = New System.Drawing.Point(200, 49)
-        Me.TextBox_CustomerName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox_CustomerName.Location = New System.Drawing.Point(143, 35)
+        Me.TextBox_CustomerName.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox_CustomerName.Name = "TextBox_CustomerName"
-        Me.TextBox_CustomerName.Size = New System.Drawing.Size(234, 24)
+        Me.TextBox_CustomerName.Size = New System.Drawing.Size(199, 24)
         Me.TextBox_CustomerName.TabIndex = 20
         '
         'Label_TransactionNum
         '
         Me.Label_TransactionNum.AutoSize = True
-        Me.Label_TransactionNum.Location = New System.Drawing.Point(194, 10)
+        Me.Label_TransactionNum.Location = New System.Drawing.Point(149, 10)
         Me.Label_TransactionNum.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label_TransactionNum.Name = "Label_TransactionNum"
         Me.Label_TransactionNum.Size = New System.Drawing.Size(161, 18)
@@ -82,10 +82,10 @@ Partial Class Control_Transaction
         '
         'Button_AddToCart
         '
-        Me.Button_AddToCart.Location = New System.Drawing.Point(354, 221)
-        Me.Button_AddToCart.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button_AddToCart.Location = New System.Drawing.Point(14, 370)
+        Me.Button_AddToCart.Margin = New System.Windows.Forms.Padding(4)
         Me.Button_AddToCart.Name = "Button_AddToCart"
-        Me.Button_AddToCart.Size = New System.Drawing.Size(164, 61)
+        Me.Button_AddToCart.Size = New System.Drawing.Size(105, 30)
         Me.Button_AddToCart.TabIndex = 18
         Me.Button_AddToCart.Text = "Add to Cart"
         Me.Button_AddToCart.UseVisualStyleBackColor = True
@@ -93,7 +93,7 @@ Partial Class Control_Transaction
         'Label_Price
         '
         Me.Label_Price.AutoSize = True
-        Me.Label_Price.Location = New System.Drawing.Point(374, 166)
+        Me.Label_Price.Location = New System.Drawing.Point(26, 337)
         Me.Label_Price.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label_Price.Name = "Label_Price"
         Me.Label_Price.Size = New System.Drawing.Size(85, 18)
@@ -102,10 +102,10 @@ Partial Class Control_Transaction
         '
         'Button_Checkout
         '
-        Me.Button_Checkout.Location = New System.Drawing.Point(798, 370)
-        Me.Button_Checkout.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button_Checkout.Location = New System.Drawing.Point(448, 282)
+        Me.Button_Checkout.Margin = New System.Windows.Forms.Padding(4)
         Me.Button_Checkout.Name = "Button_Checkout"
-        Me.Button_Checkout.Size = New System.Drawing.Size(188, 53)
+        Me.Button_Checkout.Size = New System.Drawing.Size(111, 31)
         Me.Button_Checkout.TabIndex = 16
         Me.Button_Checkout.Text = "Check-out"
         Me.Button_Checkout.UseVisualStyleBackColor = True
@@ -113,10 +113,10 @@ Partial Class Control_Transaction
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.DataGridView_Cart)
-        Me.GroupBox2.Location = New System.Drawing.Point(560, 117)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Location = New System.Drawing.Point(435, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Size = New System.Drawing.Size(426, 235)
         Me.GroupBox2.TabIndex = 15
         Me.GroupBox2.TabStop = False
@@ -131,7 +131,7 @@ Partial Class Control_Transaction
         Me.DataGridView_Cart.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.productname, Me.productprice})
         Me.DataGridView_Cart.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView_Cart.Location = New System.Drawing.Point(4, 21)
-        Me.DataGridView_Cart.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView_Cart.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView_Cart.MultiSelect = False
         Me.DataGridView_Cart.Name = "DataGridView_Cart"
         Me.DataGridView_Cart.ReadOnly = True
@@ -155,10 +155,10 @@ Partial Class Control_Transaction
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.ListBox_Products)
-        Me.GroupBox1.Location = New System.Drawing.Point(10, 117)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Location = New System.Drawing.Point(7, 78)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(300, 235)
         Me.GroupBox1.TabIndex = 14
         Me.GroupBox1.TabStop = False
@@ -170,7 +170,7 @@ Partial Class Control_Transaction
         Me.ListBox_Products.FormattingEnabled = True
         Me.ListBox_Products.ItemHeight = 18
         Me.ListBox_Products.Location = New System.Drawing.Point(4, 21)
-        Me.ListBox_Products.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ListBox_Products.Margin = New System.Windows.Forms.Padding(4)
         Me.ListBox_Products.Name = "ListBox_Products"
         Me.ListBox_Products.Size = New System.Drawing.Size(292, 210)
         Me.ListBox_Products.TabIndex = 0
@@ -178,7 +178,7 @@ Partial Class Control_Transaction
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 53)
+        Me.Label2.Location = New System.Drawing.Point(4, 38)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(122, 18)
@@ -199,6 +199,7 @@ Partial Class Control_Transaction
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Controls.Add(Me.Label_TotalPrice)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TextBox_CustomerName)
@@ -211,9 +212,9 @@ Partial Class Control_Transaction
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Control_Transaction"
-        Me.Size = New System.Drawing.Size(1079, 442)
+        Me.Size = New System.Drawing.Size(1007, 521)
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.DataGridView_Cart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
