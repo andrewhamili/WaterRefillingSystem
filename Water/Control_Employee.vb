@@ -15,6 +15,7 @@ Public Class Control_Employee
             MySQLConn.Close()
         End If
         Dim query As String
+        MySQLConn.ConnectionString = connstring
         Try
             MySQLConn.Open()
             query = "SELECT username FROM logintable"
@@ -39,6 +40,7 @@ Public Class Control_Employee
         If MySQLConn.State = ConnectionState.Open Then
             MySQLConn.Close()
         End If
+        MySQLConn.ConnectionString = connstring
         Dim mstream As New System.IO.MemoryStream()
         PictureBox_ChooseEmployeePicture.Image.Save(mstream, System.Drawing.Imaging.ImageFormat.Jpeg)
         Dim arrImage() As Byte = mstream.GetBuffer
@@ -117,6 +119,7 @@ Public Class Control_Employee
         If MySQLConn.State = ConnectionState.Open Then
             MySQLConn.Close()
         End If
+        MySQLConn.ConnectionString = connstring
         Dim query As String
         Dim arrImage As Byte()
 
@@ -195,6 +198,7 @@ Public Class Control_Employee
                 MySQLConn.Close()
             End If
 
+            MySQLConn.ConnectionString = connstring
             Dim query As String
 
             If ListBox_EmployeeList.Text = activeusername Then

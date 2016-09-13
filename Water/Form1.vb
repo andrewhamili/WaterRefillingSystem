@@ -18,17 +18,22 @@ Public Class Form_Home
     End Sub
     Private Sub B1_Transaction_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles B1_Transaction.Click
         Control_Employee1.Hide()
+        Control_Transaction1.Show()
+        Cart = 0
     End Sub
     Private Sub B2_Employee_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles B2_Employee.Click
         Control_Employee1.Show()
+        Control_Transaction1.Hide()
     End Sub
 
     Private Sub B3_Inventory_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles B3_Inventory.Click
         Control_Employee1.Hide()
+        Control_Transaction1.Hide()
     End Sub
 
     Private Sub B4_Sales_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles B4_Sales.Click
         Control_Employee1.Hide()
+        Control_Transaction1.Hide()
     End Sub
 End Class
 

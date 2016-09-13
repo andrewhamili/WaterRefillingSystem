@@ -29,6 +29,7 @@ Partial Class Form_Home
         Me.B2_Employee = New System.Windows.Forms.Button()
         Me.B1_Transaction = New System.Windows.Forms.Button()
         Me.Control_Employee1 = New Water.Control_Employee()
+        Me.Control_Transaction1 = New Water.Control_Transaction()
         Me.SuspendLayout()
         '
         'OpenFileDialog_ChooseEmployeePicture
@@ -111,6 +112,15 @@ Partial Class Form_Home
         Me.Control_Employee1.Size = New System.Drawing.Size(802, 589)
         Me.Control_Employee1.TabIndex = 16
         '
+        'Control_Transaction1
+        '
+        Me.Control_Transaction1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.Control_Transaction1.Location = New System.Drawing.Point(145, 13)
+        Me.Control_Transaction1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Control_Transaction1.Name = "Control_Transaction1"
+        Me.Control_Transaction1.Size = New System.Drawing.Size(1079, 442)
+        Me.Control_Transaction1.TabIndex = 17
+        '
         'Form_Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -118,6 +128,7 @@ Partial Class Form_Home
         Me.BackColor = System.Drawing.SystemColors.HotTrack
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1334, 626)
+        Me.Controls.Add(Me.Control_Transaction1)
         Me.Controls.Add(Me.Control_Employee1)
         Me.Controls.Add(Me.B5_LogO)
         Me.Controls.Add(Me.B4_Sales)
@@ -139,4 +150,5 @@ Partial Class Form_Home
     Friend WithEvents B5_LogO As System.Windows.Forms.Button
     Friend WithEvents OpenFileDialog_ChooseEmployeePicture As System.Windows.Forms.OpenFileDialog
     Friend WithEvents Control_Employee1 As Water.Control_Employee
+    Friend WithEvents Control_Transaction1 As Water.Control_Transaction
 End Class
