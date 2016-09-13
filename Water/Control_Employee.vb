@@ -190,35 +190,39 @@ Public Class Control_Employee
     End Sub
 
     Private Sub Button_DeleteEmployee_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button_DeleteEmployee.Click
+        If ListBox_EmployeeList.Text = "" Then
+            MsgBox("Please select an Employee first!", MsgBoxStyle.Exclamation, SystemTitle)
+        Else
+            Dim ans As Integer = MsgBox("Are you sure?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, SystemTitle)
+            If ans = 6 Then
 
-        Dim ans As Integer = MsgBox("Are you sure?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, SystemTitle)
-        If ans = 6 Then
-
-            If MySQLConn.State = ConnectionState.Open Then
-                MySQLConn.Close()
-            End If
-
-            MySQLConn.ConnectionString = connstring
-            Dim query As String
-
-            If ListBox_EmployeeList.Text = activeusername Then
-                MsgBox("You cannot delete your account. Use another account with a privilege to delete.", MsgBoxStyle.Exclamation, SystemTitle)
-            Else
-                Try
-                    MySQLConn.Open()
-                    query = "DELETE FROM logintable WHERE username=@username"
-                    comm = New MySqlCommand(query, MySQLConn)
-                    comm.Parameters.AddWithValue("username", ListBox_EmployeeList.Text)
-                    reader = comm.ExecuteReader
+                If MySQLConn.State = ConnectionState.Open Then
                     MySQLConn.Close()
-                    MsgBox("Successfully deleted " & ListBox_EmployeeList.Text & ".", MsgBoxStyle.Information, SystemTitle)
-                    ListBox_EmployeeList.ClearSelected()
-                    ListBox_EmployeeList.Items.Clear()
-                    Load_Employees()
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
+                End If
+
+                MySQLConn.ConnectionString = connstring
+                Dim query As String
+
+                If ListBox_EmployeeList.Text = activeusername Then
+                    MsgBox("You cannot delete your account. Use another account with a privilege to delete.", MsgBoxStyle.Exclamation, SystemTitle)
+                Else
+                    Try
+                        MySQLConn.Open()
+                        query = "DELETE FROM logintable WHERE username=@username"
+                        comm = New MySqlCommand(query, MySQLConn)
+                        comm.Parameters.AddWithValue("username", ListBox_EmployeeList.Text)
+                        reader = comm.ExecuteReader
+                        MySQLConn.Close()
+                        MsgBox("Successfully deleted " & ListBox_EmployeeList.Text & ".", MsgBoxStyle.Information, SystemTitle)
+                        ListBox_EmployeeList.ClearSelected()
+                        ListBox_EmployeeList.Items.Clear()
+                        Load_Employees()
+                    Catch ex As Exception
+                        MsgBox(ex.Message)
+                    End Try
+                End If
             End If
-        End If
+            End If
+
     End Sub
 End Class
