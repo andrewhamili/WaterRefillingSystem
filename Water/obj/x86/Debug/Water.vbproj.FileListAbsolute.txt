@@ -12,7 +12,6 @@ C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water
 C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\bin\Debug\Water.pdb
 C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\bin\Debug\Water.xml
 C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.Control_Employee.resources
-C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.Control_Maintenance.resources
 C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.Control_Sales.resources
 C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.Control_Transaction.resources
 C:\Users\Andrew\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.Form_Home.resources

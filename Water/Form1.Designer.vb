@@ -28,6 +28,9 @@ Partial Class Form_Home
         Me.B3_Inventory = New System.Windows.Forms.Button()
         Me.B2_Employee = New System.Windows.Forms.Button()
         Me.B1_Transaction = New System.Windows.Forms.Button()
+        Me.Control_Sales1 = New Water.Control_Sales()
+        Me.Control_Employee1 = New Water.Control_Employee()
+        Me.Control_Transaction1 = New Water.Control_Transaction()
         Me.SuspendLayout()
         '
         'OpenFileDialog_ChooseEmployeePicture
@@ -101,6 +104,36 @@ Partial Class Form_Home
         Me.B1_Transaction.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.B1_Transaction.UseVisualStyleBackColor = True
         '
+        'Control_Sales1
+        '
+        Me.Control_Sales1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Control_Sales1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.Control_Sales1.Location = New System.Drawing.Point(138, 36)
+        Me.Control_Sales1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Control_Sales1.Name = "Control_Sales1"
+        Me.Control_Sales1.Size = New System.Drawing.Size(1007, 603)
+        Me.Control_Sales1.TabIndex = 13
+        '
+        'Control_Employee1
+        '
+        Me.Control_Employee1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Control_Employee1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.Control_Employee1.Location = New System.Drawing.Point(138, 36)
+        Me.Control_Employee1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Control_Employee1.Name = "Control_Employee1"
+        Me.Control_Employee1.Size = New System.Drawing.Size(802, 589)
+        Me.Control_Employee1.TabIndex = 12
+        '
+        'Control_Transaction1
+        '
+        Me.Control_Transaction1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Control_Transaction1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.Control_Transaction1.Location = New System.Drawing.Point(138, 36)
+        Me.Control_Transaction1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Control_Transaction1.Name = "Control_Transaction1"
+        Me.Control_Transaction1.Size = New System.Drawing.Size(1079, 442)
+        Me.Control_Transaction1.TabIndex = 11
+        '
         'Form_Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -108,6 +141,9 @@ Partial Class Form_Home
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1334, 649)
+        Me.Controls.Add(Me.Control_Sales1)
+        Me.Controls.Add(Me.Control_Employee1)
+        Me.Controls.Add(Me.Control_Transaction1)
         Me.Controls.Add(Me.B5_LogO)
         Me.Controls.Add(Me.B4_Sales)
         Me.Controls.Add(Me.B3_Inventory)
@@ -127,4 +163,7 @@ Partial Class Form_Home
     Friend WithEvents B4_Sales As System.Windows.Forms.Button
     Friend WithEvents B5_LogO As System.Windows.Forms.Button
     Friend WithEvents OpenFileDialog_ChooseEmployeePicture As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents Control_Transaction1 As Water.Control_Transaction
+    Friend WithEvents Control_Employee1 As Water.Control_Employee
+    Friend WithEvents Control_Sales1 As Water.Control_Sales
 End Class

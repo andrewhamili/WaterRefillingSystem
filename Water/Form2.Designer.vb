@@ -30,7 +30,6 @@ Partial Class Form_LogIn
         Me.Button_Go = New System.Windows.Forms.Button()
         Me.Button_Cancel = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -119,15 +118,6 @@ Partial Class Form_LogIn
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(470, 252)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 14
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Form_LogIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -135,7 +125,6 @@ Partial Class Form_LogIn
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(558, 315)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button_Cancel)
         Me.Controls.Add(Me.Button_Go)
         Me.Controls.Add(Me.Txtbox_Password)
@@ -160,5 +149,4 @@ Partial Class Form_LogIn
     Friend WithEvents Txtbox_Password As System.Windows.Forms.TextBox
     Friend WithEvents Button_Go As System.Windows.Forms.Button
     Friend WithEvents Button_Cancel As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

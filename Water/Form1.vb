@@ -6,6 +6,8 @@ Public Class Form_Home
     End Sub
 
     Private Sub Form_Home_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Control_Transaction1.Hide()
+        Control_Sales1.Hide()
         Control_Employee1.Hide()
     End Sub
     Private Sub B5_LogO_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles B5_LogO.Click
@@ -17,11 +19,13 @@ Public Class Form_Home
         End If
     End Sub
     Private Sub B1_Transaction_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles B1_Transaction.Click
+        Control_Sales1.Hide()
         Control_Employee1.Hide()
         Control_Transaction1.Show()
-        Cart = 0
+        Control_Transaction1.Button_Reset_Click()
     End Sub
     Private Sub B2_Employee_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles B2_Employee.Click
+        Control_Sales1.Hide()
         Control_Employee1.Show()
         Control_Transaction1.Hide()
     End Sub
@@ -29,15 +33,14 @@ Public Class Form_Home
     Private Sub B3_Inventory_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles B3_Inventory.Click
         Control_Employee1.Hide()
         Control_Transaction1.Hide()
+        Control_Sales1.Hide()
     End Sub
 
     Private Sub B4_Sales_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles B4_Sales.Click
         Control_Employee1.Hide()
         Control_Transaction1.Hide()
-    End Sub
-
-    Private Sub Control_Transaction1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
+        Control_Sales1.Show()
+        Control_Sales1.Load_Transaction_Table()
     End Sub
 End Class
 

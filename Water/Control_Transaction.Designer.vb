@@ -37,6 +37,7 @@ Partial Class Control_Transaction
         Me.ListBox_Products = New System.Windows.Forms.ListBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button_Reset = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView_Cart, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -73,7 +74,7 @@ Partial Class Control_Transaction
         'Label_TransactionNum
         '
         Me.Label_TransactionNum.AutoSize = True
-        Me.Label_TransactionNum.Location = New System.Drawing.Point(149, 10)
+        Me.Label_TransactionNum.Location = New System.Drawing.Point(146, 10)
         Me.Label_TransactionNum.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label_TransactionNum.Name = "Label_TransactionNum"
         Me.Label_TransactionNum.Size = New System.Drawing.Size(161, 18)
@@ -195,11 +196,21 @@ Partial Class Control_Transaction
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Transaction No.:"
         '
+        'Button_Reset
+        '
+        Me.Button_Reset.Location = New System.Drawing.Point(567, 282)
+        Me.Button_Reset.Name = "Button_Reset"
+        Me.Button_Reset.Size = New System.Drawing.Size(100, 31)
+        Me.Button_Reset.TabIndex = 23
+        Me.Button_Reset.Text = "Reset"
+        Me.Button_Reset.UseVisualStyleBackColor = True
+        '
         'Control_Transaction
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Controls.Add(Me.Button_Reset)
         Me.Controls.Add(Me.Label_TotalPrice)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TextBox_CustomerName)
@@ -237,5 +248,6 @@ Partial Class Control_Transaction
     Friend WithEvents ListBox_Products As System.Windows.Forms.ListBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Button_Reset As System.Windows.Forms.Button
 
 End Class
