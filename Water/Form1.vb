@@ -28,6 +28,14 @@ Public Class Form_Home
         Control_Sales1.Hide()
         Control_Employee1.Show()
         Control_Transaction1.Hide()
+
+        Control_Employee1.Label_EmployeeFirstname.Text = ""
+        Control_Employee1.Label_EmployeeMiddleName.Text = ""
+        Control_Employee1.Label_EmployeeLastname.Text = ""
+        Control_Employee1.Label_EmployeeAddress.Text = ""
+        Control_Employee1.Label_EmployeeEmail.Text = ""
+        Control_Employee1.Label_EmployeeContact.Text = ""
+        Control_Employee1.Label_EmployeeContact.Text = ""
     End Sub
 
     Private Sub B3_Inventory_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles B3_Inventory.Click

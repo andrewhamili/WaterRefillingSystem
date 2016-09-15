@@ -58,7 +58,7 @@ Public Class Control_Employee
                 Try
                     MySQLConn.Open()
                     If EmployeeAction = "edit" Then
-                        query = "update logintable set lname=@lastname, fname=@firstname, mname=@middlename, address=@address, contact=@contact, email=@email, password=sha2(@password, 512), usertype=@usertype, image=@image WHERE username=@usernametoedit"
+                        query = "update logintable set fname=@firstname, mname=@middlename, lname=@lastname, address=@address, contact=@contact, email=@email, password=sha2(@password, 512), usertype=@usertype, image=@image WHERE username=@usernametoedit"
                         comm = New MySqlCommand(query, MySQLConn)
                         comm.Parameters.AddWithValue("lastname", TextBox_LastName.Text)
                         comm.Parameters.AddWithValue("firstname", TextBox_FirstName.Text)

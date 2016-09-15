@@ -560,8 +560,8 @@ Partial Class Control_Employee
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Controls.Add(Me.Panel_EmployeeMain)
         Me.Controls.Add(Me.Panel_EmployeeManager)
+        Me.Controls.Add(Me.Panel_EmployeeMain)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Control_Employee"
