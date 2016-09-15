@@ -6,6 +6,7 @@ Public Class Control_Transaction
         Label_Price.Text = ""
         Label_TransactionNum.Text = Now.ToString("yyyyHHmmss") + "" & TransactionNumber.Next(1, 1000000000)
         Label_TotalPrice.Text = "Php." + FormatNumber(CDbl(CartPrice), 2)
+        Timer_Delivery.Enabled = True
     End Sub
     Public Sub Load_Products()
         If MySQLConn.State = ConnectionState.Open Then
@@ -120,11 +121,16 @@ Public Class Control_Transaction
                 success = False
                 Try
                     MySQLConn.Open()
-                    query = "INSERT INTO transac_table values(@transactionnum, @customername, @productname, @productprice, @transactiondate)"
+                    query = "INSERT INTO transac_table values(@transactionnum, @customername, @productname, @delivery, @productprice, @transactiondate)"
                     comm = New MySqlCommand(query, MySQLConn)
                     comm.Parameters.AddWithValue("transactionnum", Label_TransactionNum.Text)
                     comm.Parameters.AddWithValue("customername", TextBox_CustomerName.Text)
                     comm.Parameters.AddWithValue("productname", productname)
+                    If CheckBox_Delivery.Checked = True Then
+                        comm.Parameters.AddWithValue("delivery", "Yes")
+                    Else
+                        comm.Parameters.AddWithValue("delivery", "No")
+                    End If
                     comm.Parameters.AddWithValue("productprice", productprice)
                     comm.Parameters.AddWithValue("transactiondate", transactiondate)
                     reader = comm.ExecuteReader
@@ -143,6 +149,7 @@ Public Class Control_Transaction
         End If
         If success = True Then
             MsgBox("The Transaction was successfully saved!", MsgBoxStyle.Information, SystemTitle)
+            Button_Reset_Click()
         Else
             MsgBox("There was an error saving the transaction", MsgBoxStyle.Critical, SystemTitle)
         End If
@@ -157,6 +164,15 @@ Public Class Control_Transaction
         Load_Products()
         CartPrice = 0
         DataGridView_Cart.Rows.Clear()
+        CheckBox_Delivery.Checked = False
         TextBox_CustomerName.Enabled = True
+    End Sub
+
+    Private Sub Timer_Delivery_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer_Delivery.Tick
+        If CheckBox_Delivery.Checked = True Then
+            label_deliveryprice.Visible = True
+        Else
+            label_deliveryprice.Visible = False
+        End If
     End Sub
 End Class

@@ -22,6 +22,7 @@ Partial Class Control_Transaction
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label_TotalPrice = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox_CustomerName = New System.Windows.Forms.TextBox()
@@ -38,6 +39,9 @@ Partial Class Control_Transaction
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button_Reset = New System.Windows.Forms.Button()
+        Me.CheckBox_Delivery = New System.Windows.Forms.CheckBox()
+        Me.label_deliveryprice = New System.Windows.Forms.Label()
+        Me.Timer_Delivery = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView_Cart, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -46,7 +50,7 @@ Partial Class Control_Transaction
         'Label_TotalPrice
         '
         Me.Label_TotalPrice.AutoSize = True
-        Me.Label_TotalPrice.Location = New System.Drawing.Point(532, 254)
+        Me.Label_TotalPrice.Location = New System.Drawing.Point(523, 291)
         Me.Label_TotalPrice.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label_TotalPrice.Name = "Label_TotalPrice"
         Me.Label_TotalPrice.Size = New System.Drawing.Size(66, 18)
@@ -56,7 +60,7 @@ Partial Class Control_Transaction
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(445, 254)
+        Me.Label4.Location = New System.Drawing.Point(436, 291)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(79, 18)
@@ -103,7 +107,7 @@ Partial Class Control_Transaction
         '
         'Button_Checkout
         '
-        Me.Button_Checkout.Location = New System.Drawing.Point(448, 282)
+        Me.Button_Checkout.Location = New System.Drawing.Point(439, 337)
         Me.Button_Checkout.Margin = New System.Windows.Forms.Padding(4)
         Me.Button_Checkout.Name = "Button_Checkout"
         Me.Button_Checkout.Size = New System.Drawing.Size(111, 31)
@@ -198,18 +202,45 @@ Partial Class Control_Transaction
         '
         'Button_Reset
         '
-        Me.Button_Reset.Location = New System.Drawing.Point(567, 282)
+        Me.Button_Reset.Location = New System.Drawing.Point(558, 337)
         Me.Button_Reset.Name = "Button_Reset"
         Me.Button_Reset.Size = New System.Drawing.Size(100, 31)
         Me.Button_Reset.TabIndex = 23
         Me.Button_Reset.Text = "Reset"
         Me.Button_Reset.UseVisualStyleBackColor = True
         '
+        'CheckBox_Delivery
+        '
+        Me.CheckBox_Delivery.AutoSize = True
+        Me.CheckBox_Delivery.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox_Delivery.Location = New System.Drawing.Point(435, 255)
+        Me.CheckBox_Delivery.Name = "CheckBox_Delivery"
+        Me.CheckBox_Delivery.Size = New System.Drawing.Size(87, 22)
+        Me.CheckBox_Delivery.TabIndex = 24
+        Me.CheckBox_Delivery.Text = "Delivery"
+        Me.CheckBox_Delivery.UseVisualStyleBackColor = True
+        '
+        'label_deliveryprice
+        '
+        Me.label_deliveryprice.AutoSize = True
+        Me.label_deliveryprice.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label_deliveryprice.Location = New System.Drawing.Point(555, 309)
+        Me.label_deliveryprice.Name = "label_deliveryprice"
+        Me.label_deliveryprice.Size = New System.Drawing.Size(124, 18)
+        Me.label_deliveryprice.TabIndex = 25
+        Me.label_deliveryprice.Text = "+15 for delivery"
+        Me.label_deliveryprice.Visible = False
+        '
+        'Timer_Delivery
+        '
+        '
         'Control_Transaction
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Controls.Add(Me.label_deliveryprice)
+        Me.Controls.Add(Me.CheckBox_Delivery)
         Me.Controls.Add(Me.Button_Reset)
         Me.Controls.Add(Me.Label_TotalPrice)
         Me.Controls.Add(Me.Label4)
@@ -249,5 +280,8 @@ Partial Class Control_Transaction
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button_Reset As System.Windows.Forms.Button
+    Friend WithEvents CheckBox_Delivery As System.Windows.Forms.CheckBox
+    Friend WithEvents label_deliveryprice As System.Windows.Forms.Label
+    Friend WithEvents Timer_Delivery As System.Windows.Forms.Timer
 
 End Class

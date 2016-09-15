@@ -25,12 +25,12 @@ Partial Class Control_Sales
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridView_Transactions = New System.Windows.Forms.DataGridView()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Button_ShowAll = New System.Windows.Forms.Button()
+        Me.Button_Filter = New System.Windows.Forms.Button()
         Me.DateTimePicker_SalesEndDate = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker_SalesStartDate = New System.Windows.Forms.DateTimePicker()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.Button_Filter = New System.Windows.Forms.Button()
-        Me.Button_ShowAll = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView_Transactions, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
@@ -53,9 +53,12 @@ Partial Class Control_Sales
         Me.DataGridView_Transactions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView_Transactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView_Transactions.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView_Transactions.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DataGridView_Transactions.Location = New System.Drawing.Point(6, 22)
-        Me.DataGridView_Transactions.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView_Transactions.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView_Transactions.Name = "DataGridView_Transactions"
+        Me.DataGridView_Transactions.RowHeadersVisible = False
+        Me.DataGridView_Transactions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView_Transactions.Size = New System.Drawing.Size(762, 324)
         Me.DataGridView_Transactions.TabIndex = 0
         '
@@ -76,12 +79,30 @@ Partial Class Control_Sales
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Date Range"
         '
+        'Button_ShowAll
+        '
+        Me.Button_ShowAll.Location = New System.Drawing.Point(618, 78)
+        Me.Button_ShowAll.Name = "Button_ShowAll"
+        Me.Button_ShowAll.Size = New System.Drawing.Size(132, 23)
+        Me.Button_ShowAll.TabIndex = 18
+        Me.Button_ShowAll.Text = "Show All"
+        Me.Button_ShowAll.UseVisualStyleBackColor = True
+        '
+        'Button_Filter
+        '
+        Me.Button_Filter.Location = New System.Drawing.Point(499, 76)
+        Me.Button_Filter.Name = "Button_Filter"
+        Me.Button_Filter.Size = New System.Drawing.Size(100, 23)
+        Me.Button_Filter.TabIndex = 17
+        Me.Button_Filter.Text = "Filter"
+        Me.Button_Filter.UseVisualStyleBackColor = True
+        '
         'DateTimePicker_SalesEndDate
         '
         Me.DateTimePicker_SalesEndDate.CustomFormat = "yyyy-MM-dd"
         Me.DateTimePicker_SalesEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker_SalesEndDate.Location = New System.Drawing.Point(387, 75)
-        Me.DateTimePicker_SalesEndDate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DateTimePicker_SalesEndDate.Margin = New System.Windows.Forms.Padding(4)
         Me.DateTimePicker_SalesEndDate.Name = "DateTimePicker_SalesEndDate"
         Me.DateTimePicker_SalesEndDate.Size = New System.Drawing.Size(104, 24)
         Me.DateTimePicker_SalesEndDate.TabIndex = 16
@@ -92,7 +113,7 @@ Partial Class Control_Sales
         Me.DateTimePicker_SalesStartDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
         Me.DateTimePicker_SalesStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker_SalesStartDate.Location = New System.Drawing.Point(129, 76)
-        Me.DateTimePicker_SalesStartDate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DateTimePicker_SalesStartDate.Margin = New System.Windows.Forms.Padding(4)
         Me.DateTimePicker_SalesStartDate.Name = "DateTimePicker_SalesStartDate"
         Me.DateTimePicker_SalesStartDate.Size = New System.Drawing.Size(103, 24)
         Me.DateTimePicker_SalesStartDate.TabIndex = 15
@@ -121,24 +142,6 @@ Partial Class Control_Sales
         Me.Label19.TabIndex = 13
         Me.Label19.Text = "Start Date:"
         '
-        'Button_Filter
-        '
-        Me.Button_Filter.Location = New System.Drawing.Point(499, 76)
-        Me.Button_Filter.Name = "Button_Filter"
-        Me.Button_Filter.Size = New System.Drawing.Size(100, 23)
-        Me.Button_Filter.TabIndex = 17
-        Me.Button_Filter.Text = "Filter"
-        Me.Button_Filter.UseVisualStyleBackColor = True
-        '
-        'Button_ShowAll
-        '
-        Me.Button_ShowAll.Location = New System.Drawing.Point(618, 78)
-        Me.Button_ShowAll.Name = "Button_ShowAll"
-        Me.Button_ShowAll.Size = New System.Drawing.Size(132, 23)
-        Me.Button_ShowAll.TabIndex = 18
-        Me.Button_ShowAll.Text = "Show All"
-        Me.Button_ShowAll.UseVisualStyleBackColor = True
-        '
         'Control_Sales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -147,7 +150,7 @@ Partial Class Control_Sales
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox4)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Control_Sales"
         Me.Size = New System.Drawing.Size(797, 572)
         Me.GroupBox1.ResumeLayout(False)
