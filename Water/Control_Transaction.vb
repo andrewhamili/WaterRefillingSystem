@@ -1,12 +1,12 @@
-﻿Imports MySql.Data.MySqlClient
+﻿
+Imports MySql.Data.MySqlClient
 Public Class Control_Transaction
     Public TransactionNumber As New Random()
-    Private Sub Control_Transaction_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub Control_Transaction_Load(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Load_Products()
         Label_Price.Text = ""
-        Label_TransactionNum.Text = Now.ToString("yyyyHHmmss") + "" & TransactionNumber.Next(1, 1000000000)
+        Label_TransactionNum.Text = Now.ToString("yyyyHHmmss") + TransactionNumber.Next(1, 1000000000)
         Label_TotalPrice.Text = "Php." + FormatNumber(CDbl(CartPrice), 2)
-        Timer_Delivery.Enabled = True
     End Sub
     Public Sub Load_Products()
         If MySQLConn.State = ConnectionState.Open Then
@@ -31,7 +31,7 @@ Public Class Control_Transaction
         End Try
     End Sub
 
-    Private Sub ListBox_Products_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ListBox_Products.SelectedIndexChanged
+    Private Sub ListBox_Products_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox_Products.SelectedIndexChanged
         If MySQLConn.State = ConnectionState.Open Then
             MySQLConn.Close()
         End If
@@ -53,58 +53,66 @@ Public Class Control_Transaction
         End Try
     End Sub
 
-    Private Sub Button_AddToCart_Click(sender As System.Object, e As System.EventArgs) Handles Button_AddToCart.Click
+    Private Sub Button_AddToCart_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button_AddToCart.Click
         If MySQLConn.State = ConnectionState.Open Then
             MySQLConn.Close()
-        End If
+		 End If
         If TextBox_CustomerName.Text = "" Then
             MsgBox("Please enter the customer's name first!", MsgBoxStyle.Exclamation, SystemTitle)
         Else
+
             If ListBox_Products.Text = "" Then
                 MsgBox("Please select a Product first!", MsgBoxStyle.Exclamation, SystemTitle)
             Else
-                Dim query As String
-                Dim productname As String
-                Dim productprice As Integer
-                TextBox_CustomerName.Enabled = False
-                Try
-                    MySQLConn.Open()
-                    query = "SELECT * FROM producttable WHERE productname=@selected"
-                    comm = New MySqlCommand(query, MySQLConn)
-                    comm.Parameters.AddWithValue("selected", ListBox_Products.Text)
-                    reader = comm.ExecuteReader
-                    Dim count As Integer = 1
-                    'If DataGridView_Cart.RowCount >= 0 Then
-                    '    count = DataGridView_Cart.RowCount
-                    'End If
-                    While reader.Read
-                        productname = reader.GetString("productname")
-                        productprice = reader.GetInt32("productprice")
-                        CartPrice = CartPrice + productprice
-                    End While
-                    MySQLConn.Close()
-                    With DataGridView_Cart
-                        .Rows.Add()
-                        .Rows(Cart).Cells("productname").Value = productname
-                        .Rows(Cart).Cells("productprice").Value = productprice
-                        Cart += 1
-                    End With
-                    ListBox_Products.ClearSelected()
-                    Load_Products()
-                    Label_TotalPrice.Text = "Php." + FormatNumber(CDbl(CartPrice), 2)
-                    DataGridView_Cart.FirstDisplayedScrollingRowIndex = DataGridView_Cart.RowCount - 1
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                Finally
-                    MySQLConn.Dispose()
-                End Try
+                If ListBox_Products.Text = "" Then
+                    MsgBox("Please select a Product first!", MsgBoxStyle.Exclamation, SystemTitle)
+                Else
+
+                    Dim query As String
+                    Dim productname As String
+                    Dim price As String
+                    Dim productprice As Integer
+                    TextBox_CustomerName.Enabled = False
+                    Try
+                        MySQLConn.Open()
+                        query = "SELECT * FROM producttable WHERE productname=@selected"
+                        comm = New MySqlCommand(query, MySQLConn)
+                        comm.Parameters.AddWithValue("selected", ListBox_Products.Text)
+                        reader = comm.ExecuteReader
+                        Dim count As Integer = 1
+                        'If DataGridView_Cart.RowCount >= 0 Then
+                        '    count = DataGridView_Cart.RowCount
+                        'End If
+                        While reader.Read
+                            productname = reader.GetString("productname")
+                            productprice = reader.GetInt32("productprice")
+                            CartPrice = CartPrice + productprice
+                            price = TextBox_quantity.Text
+                        End While
+                        MySQLConn.Close()
+                        With DataGridView_Cart
+                            .Rows.Add()
+                            .Rows(Cart).Cells("productname").Value = productname
+                            .Rows(Cart).Cells("Qty").Value = price
+                            .Rows(Cart).Cells("productprice").Value = productprice
+                            Cart += 1
+                        End With
+                        Load_Products()
+                        Label_TotalPrice.Text = "Php." + FormatNumber(CDbl(CartPrice), 2)
+                        DataGridView_Cart.FirstDisplayedScrollingRowIndex = DataGridView_Cart.RowCount - 1
+
+
+                    Catch ex As Exception
+                        MsgBox(ex.Message)
+                    Finally
+                        MySQLConn.Dispose()
+                    End Try
+                End If
             End If
         End If
-        
-        
     End Sub
 
-    Private Sub Button_Checkout_Click(sender As System.Object, e As System.EventArgs) Handles Button_Checkout.Click
+    Private Sub Button_Checkout_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button_Checkout.Click
         If MySQLConn.State = ConnectionState.Open Then
             MySQLConn.Close()
         End If
@@ -157,7 +165,6 @@ Public Class Control_Transaction
     End Sub
 
     Public Sub Button_Reset_Click() Handles Button_Reset.Click
-        ListBox_Products.ClearSelected()
         TextBox_CustomerName.Text = ""
         Label_TransactionNum.Text = Now.ToString("yyyyHHmmss") + "" & TransactionNumber.Next(1, 1000000000)
         Cart = 0
@@ -174,5 +181,17 @@ Public Class Control_Transaction
         Else
             label_deliveryprice.Visible = False
         End If
+    End Sub
+
+    Private Sub Label3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub label_deliveryprice_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles label_deliveryprice.Click
+
+    End Sub
+
+    Private Sub Label6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label6.Click
+
     End Sub
 End Class

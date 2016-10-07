@@ -37,10 +37,10 @@ Partial Class Form_LogIn
         '
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Monotype Corsiva", 36.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label3.Location = New System.Drawing.Point(12, 0)
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(172, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(523, 62)
+        Me.Label3.Size = New System.Drawing.Size(363, 62)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "WELCOME !!"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -48,10 +48,10 @@ Partial Class Form_LogIn
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.White
+        Me.Label1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label1.Location = New System.Drawing.Point(18, 234)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(201, 82)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(105, 24)
         Me.Label1.TabIndex = 8
@@ -60,10 +60,10 @@ Partial Class Form_LogIn
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.White
+        Me.Label2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label2.Location = New System.Drawing.Point(18, 267)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(206, 114)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(100, 24)
         Me.Label2.TabIndex = 9
@@ -71,14 +71,14 @@ Partial Class Form_LogIn
         '
         'txtbox_username
         '
-        Me.txtbox_username.Location = New System.Drawing.Point(134, 238)
+        Me.txtbox_username.Location = New System.Drawing.Point(317, 86)
         Me.txtbox_username.Name = "txtbox_username"
         Me.txtbox_username.Size = New System.Drawing.Size(150, 20)
         Me.txtbox_username.TabIndex = 10
         '
         'Txtbox_Password
         '
-        Me.Txtbox_Password.Location = New System.Drawing.Point(134, 269)
+        Me.Txtbox_Password.Location = New System.Drawing.Point(317, 117)
         Me.Txtbox_Password.Name = "Txtbox_Password"
         Me.Txtbox_Password.Size = New System.Drawing.Size(150, 20)
         Me.Txtbox_Password.TabIndex = 11
@@ -86,22 +86,22 @@ Partial Class Form_LogIn
         '
         'Button_Go
         '
-        Me.Button_Go.BackColor = System.Drawing.Color.PaleTurquoise
+        Me.Button_Go.BackColor = System.Drawing.Color.White
         Me.Button_Go.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Go.ForeColor = System.Drawing.Color.Maroon
-        Me.Button_Go.Location = New System.Drawing.Point(340, 235)
+        Me.Button_Go.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button_Go.Location = New System.Drawing.Point(252, 177)
         Me.Button_Go.Name = "Button_Go"
         Me.Button_Go.Size = New System.Drawing.Size(75, 23)
         Me.Button_Go.TabIndex = 12
-        Me.Button_Go.Text = "Go"
+        Me.Button_Go.Text = "Login"
         Me.Button_Go.UseVisualStyleBackColor = False
         '
         'Button_Cancel
         '
-        Me.Button_Cancel.BackColor = System.Drawing.Color.PaleTurquoise
+        Me.Button_Cancel.BackColor = System.Drawing.Color.White
         Me.Button_Cancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Cancel.ForeColor = System.Drawing.Color.Maroon
-        Me.Button_Cancel.Location = New System.Drawing.Point(340, 269)
+        Me.Button_Cancel.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button_Cancel.Location = New System.Drawing.Point(363, 177)
         Me.Button_Cancel.Name = "Button_Cancel"
         Me.Button_Cancel.Size = New System.Drawing.Size(75, 23)
         Me.Button_Cancel.TabIndex = 13
@@ -112,9 +112,9 @@ Partial Class Form_LogIn
         '
         Me.PictureBox1.BackgroundImage = Global.Water.My.Resources.Resources.Logo
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 65)
+        Me.PictureBox1.Location = New System.Drawing.Point(22, 12)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(555, 148)
+        Me.PictureBox1.Size = New System.Drawing.Size(144, 110)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '

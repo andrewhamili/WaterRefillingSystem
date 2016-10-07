@@ -28,10 +28,47 @@ C:\Users\Genelyne\Desktop\WaterRefillingSystem\Water\bin\Debug\Water.exe
 C:\Users\Genelyne\Desktop\WaterRefillingSystem\Water\bin\Debug\Water.pdb
 C:\Users\Genelyne\Desktop\WaterRefillingSystem\Water\bin\Debug\Water.xml
 C:\Users\Genelyne\Desktop\WaterRefillingSystem\Water\obj\x86\Debug\Water.Control_Employee.resources
-C:\Users\Genelyne\Desktop\WaterRefillingSystem\Water\obj\x86\Debug\Water.Control_Maintenance.resources
 C:\Users\Genelyne\Desktop\WaterRefillingSystem\Water\obj\x86\Debug\Water.Control_Sales.resources
 C:\Users\Genelyne\Desktop\WaterRefillingSystem\Water\obj\x86\Debug\Water.Control_Transaction.resources
 C:\Users\Genelyne\Desktop\WaterRefillingSystem\Water\obj\x86\Debug\Water.Form_Home.resources
 C:\Users\Genelyne\Desktop\WaterRefillingSystem\Water\obj\x86\Debug\Water.Form_LogIn.resources
 C:\Users\Genelyne\Desktop\WaterRefillingSystem\Water\obj\x86\Debug\Water.Resources.resources
 C:\Users\Genelyne\Desktop\WaterRefillingSystem\Water\obj\x86\Debug\Water.vbproj.GenerateResource.Cache
+C:\Users\Genelyne\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.Control_Employee.resources
+C:\Users\Genelyne\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.Control_Sales.resources
+C:\Users\Genelyne\Documents\Visual Studio 2010\Projects\WaterRefillingSystem\Water\obj\x86\Debug\Water.Control_Transaction.resources
+C:\Users\Genelyne\Desktop\FINAL\Water\obj\x86\Debug\Water.exe
+C:\Users\Genelyne\Desktop\FINAL\Water\obj\x86\Debug\Water.xml
+C:\Users\Genelyne\Desktop\FINAL\Water\obj\x86\Debug\Water.pdb
+C:\Users\Genelyne\Desktop\FINAL\Water\bin\Debug\Water.exe
+C:\Users\Genelyne\Desktop\FINAL\Water\bin\Debug\Water.pdb
+C:\Users\Genelyne\Desktop\FINAL\Water\bin\Debug\Water.xml
+C:\Users\Genelyne\Desktop\FINAL\Water\obj\x86\Debug\Water.Control_Employee.resources
+C:\Users\Genelyne\Desktop\FINAL\Water\obj\x86\Debug\Water.Control_Sales.resources
+C:\Users\Genelyne\Desktop\FINAL\Water\obj\x86\Debug\Water.Control_Transaction.resources
+C:\Users\Genelyne\Desktop\FINAL\Water\obj\x86\Debug\Water.Form_Home.resources
+C:\Users\Genelyne\Desktop\FINAL\Water\obj\x86\Debug\Water.Form_LogIn.resources
+C:\Users\Genelyne\Desktop\FINAL\Water\obj\x86\Debug\Water.Resources.resources
+C:\Users\Genelyne\Desktop\FINAL\Water\obj\x86\Debug\Water.vbproj.GenerateResource.Cache
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\bin\Debug\Water.exe
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\bin\Debug\Water.pdb
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\bin\Debug\Water.xml
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\bin\Debug\MySql.Data.dll
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\Water.Control_Employee.resources
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\Water.Control_Sales.resources
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\Water.Control_Transaction.resources
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\Water.Form_Home.resources
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\Water.Form_LogIn.resources
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\Water.Resources.resources
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\Water.Print.resources
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\Water.UserControl1.resources
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\Water.UserControl_Maintenance.resources
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\Water.exe
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\Water.xml
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\Water.pdb
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\bin\Debug\Report1.rdlc
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\RdlCompile.cache
+C:\Users\pc\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\RdlCompile.compiled
