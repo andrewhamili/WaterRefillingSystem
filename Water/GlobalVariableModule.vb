@@ -17,6 +17,9 @@ Module GlobalVariableModule
 
     Public Cart As Integer = 0
     Public CartPrice As Integer
+    Public DeliveryPrice As Integer
+
+    Public CurrentTransactionNumber As String
 
 End Module
 

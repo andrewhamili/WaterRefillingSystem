@@ -16,7 +16,7 @@ Public Class Control_Sales
 
         Try
             MySQLConn.Open()
-            query = "SELECT transactionnum AS 'Transaction Number', customername AS 'Customer Name', productname AS 'Product Name', productprice AS 'Price', delivery as 'Delivery', transactiondate AS 'Date' FROM transac_table;"
+            query = "SELECT transactionnum AS 'Transaction Number', customername AS 'Customer Name', quantity as Quantity, productname AS 'Product Name', productprice AS 'Price', transactiondate AS 'Date' FROM transac_table;"
             comm = New MySqlCommand(query, MySQLConn)
             adapter.SelectCommand = comm
             adapter.Fill(dbdataset)

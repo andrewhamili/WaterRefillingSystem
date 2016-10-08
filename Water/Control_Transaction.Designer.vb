@@ -40,19 +40,12 @@ Partial Class Control_Transaction
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button_Reset = New System.Windows.Forms.Button()
-        Me.CheckBox_Delivery = New System.Windows.Forms.CheckBox()
-        Me.label_deliveryprice = New System.Windows.Forms.Label()
         Me.Timer_Delivery = New System.Windows.Forms.Timer(Me.components)
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox_quantity = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button_CancelTransaction = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView_Cart, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -62,7 +55,7 @@ Partial Class Control_Transaction
         '
         Me.Label_TotalPrice.AutoSize = True
         Me.Label_TotalPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_TotalPrice.Location = New System.Drawing.Point(462, 238)
+        Me.Label_TotalPrice.Location = New System.Drawing.Point(461, 253)
         Me.Label_TotalPrice.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label_TotalPrice.Name = "Label_TotalPrice"
         Me.Label_TotalPrice.Size = New System.Drawing.Size(74, 18)
@@ -73,7 +66,7 @@ Partial Class Control_Transaction
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(355, 238)
+        Me.Label4.Location = New System.Drawing.Point(354, 253)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(95, 18)
@@ -190,9 +183,9 @@ Partial Class Control_Transaction
         '
         'Listbox_Products
         '
+        Me.Listbox_Products.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Listbox_Products.FormattingEnabled = True
-        Me.Listbox_Products.Items.AddRange(New Object() {"1 Liter", "1Liter (Refill)", "10 Liter", "10 Liter (Refill)", "5 Gallon", "5 Gallon (Refil)", "500 mL", "500 mL (Refill)", "6 Liter", "6 Liter (Refill)"})
-        Me.Listbox_Products.Location = New System.Drawing.Point(0, 22)
+        Me.Listbox_Products.Location = New System.Drawing.Point(0, 24)
         Me.Listbox_Products.Name = "Listbox_Products"
         Me.Listbox_Products.Size = New System.Drawing.Size(188, 26)
         Me.Listbox_Products.TabIndex = 0
@@ -228,30 +221,6 @@ Partial Class Control_Transaction
         Me.Button_Reset.Text = "Reset"
         Me.Button_Reset.UseVisualStyleBackColor = True
         '
-        'CheckBox_Delivery
-        '
-        Me.CheckBox_Delivery.AutoSize = True
-        Me.CheckBox_Delivery.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox_Delivery.Location = New System.Drawing.Point(358, 259)
-        Me.CheckBox_Delivery.Name = "CheckBox_Delivery"
-        Me.CheckBox_Delivery.Size = New System.Drawing.Size(87, 22)
-        Me.CheckBox_Delivery.TabIndex = 24
-        Me.CheckBox_Delivery.Text = "Delivery"
-        Me.CheckBox_Delivery.UseVisualStyleBackColor = True
-        '
-        'label_deliveryprice
-        '
-        Me.label_deliveryprice.AllowDrop = True
-        Me.label_deliveryprice.AutoSize = True
-        Me.label_deliveryprice.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_deliveryprice.Location = New System.Drawing.Point(462, 284)
-        Me.label_deliveryprice.Name = "label_deliveryprice"
-        Me.label_deliveryprice.Size = New System.Drawing.Size(74, 22)
-        Me.label_deliveryprice.TabIndex = 25
-        Me.label_deliveryprice.Text = "Php.5.00 "
-        Me.label_deliveryprice.UseCompatibleTextRendering = True
-        Me.label_deliveryprice.Visible = False
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -268,6 +237,7 @@ Partial Class Control_Transaction
         Me.TextBox_quantity.Name = "TextBox_quantity"
         Me.TextBox_quantity.Size = New System.Drawing.Size(195, 24)
         Me.TextBox_quantity.TabIndex = 27
+        Me.TextBox_quantity.Text = "1"
         '
         'Label5
         '
@@ -298,73 +268,16 @@ Partial Class Control_Transaction
         Me.Button_CancelTransaction.Text = "Cancel"
         Me.Button_CancelTransaction.UseVisualStyleBackColor = True
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(339, 284)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(106, 18)
-        Me.Label7.TabIndex = 31
-        Me.Label7.Text = "Delivery Fee:"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(337, 314)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(108, 18)
-        Me.Label8.TabIndex = 32
-        Me.Label8.Text = "TOTAL BILL :"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(397, 343)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(48, 18)
-        Me.Label9.TabIndex = 33
-        Me.Label9.Text = "VAT :"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(356, 373)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(89, 18)
-        Me.Label10.TabIndex = 34
-        Me.Label10.Text = "VATABLE :"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(382, 401)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(63, 18)
-        Me.Label11.TabIndex = 35
-        Me.Label11.Text = "CASH :"
-        '
         'Control_Transaction
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button_CancelTransaction)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TextBox_quantity)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.label_deliveryprice)
-        Me.Controls.Add(Me.CheckBox_Delivery)
         Me.Controls.Add(Me.Button_Reset)
         Me.Controls.Add(Me.Label_TotalPrice)
         Me.Controls.Add(Me.Label4)
@@ -401,8 +314,6 @@ Partial Class Control_Transaction
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button_Reset As System.Windows.Forms.Button
-    Friend WithEvents CheckBox_Delivery As System.Windows.Forms.CheckBox
-    Friend WithEvents label_deliveryprice As System.Windows.Forms.Label
     Friend WithEvents Timer_Delivery As System.Windows.Forms.Timer
     Friend WithEvents Listbox_Products As System.Windows.Forms.ComboBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
@@ -413,10 +324,5 @@ Partial Class Control_Transaction
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Button_CancelTransaction As System.Windows.Forms.Button
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Label11 As System.Windows.Forms.Label
 
 End Class

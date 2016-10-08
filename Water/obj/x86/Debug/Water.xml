@@ -10,11 +10,23 @@ Water
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:Water.DataSet1.DataTable2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:Water.DataSet1.DataTable1Row">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:Water.DataSet1.DataTable2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:Water.DataSet1.DataTable1RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Water.DataSet1.DataTable2RowChangeEvent">
 	<summary>
 Row event argument class
 </summary>

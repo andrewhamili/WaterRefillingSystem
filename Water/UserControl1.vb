@@ -16,7 +16,7 @@ Public Class UserControl1
 
         Try
             MySQLConn.Open()
-            query = "SELECT transactionnum AS 'Transaction Number', customername AS 'Customer Name', productname AS 'Product Name', productprice AS 'Price', delivery as 'Delivery', transactiondate AS 'Date' FROM transac_table;"
+            query = "SELECT transactionnum, customername, productname, quantity, productprice, date_format(transactiondate, '%Y-%m-%d') AS transactiondate FROM transac_table;"
             comm = New MySqlCommand(query, MySQLConn)
             adapter.SelectCommand = comm
             adapter.Fill(dbdataset)
@@ -42,9 +42,9 @@ Public Class UserControl1
 
         Try
             MySQLConn.Open()
-            query = "SELECT transactionnum AS 'Transaction Number', customername AS 'Customer Name', productname AS 'Product Name', productprice AS 'Price', delivery as 'Delivery', transactiondate AS 'Date' FROM transac_table WHERE transactiondate=@datechosen;"
+            query = "SELECT transactionnum, customername, productname, quantity, productprice, date_format(transactiondate, '%Y-%m-%d') AS transactiondate FROM transac_table WHERE transactiondate=@datechosen;"
             comm = New MySqlCommand(query, MySQLConn)
-            comm.Parameters.AddWithValue("datechosen", DateTimePicker1.Value.ToString("yy-MM-dd"))
+            comm.Parameters.AddWithValue("datechosen", DateTimePicker1.Value.ToString("yyyy-MM-dd"))
             adapter.SelectCommand = comm
             adapter.Fill(dbdataset)
             bsource.DataSource = dbdataset
@@ -59,11 +59,9 @@ Public Class UserControl1
     End Sub
     Public Sub load_items()
         'dbdataset.Clear()
-        'If MySQLConn.State = ConnectionState.Open.Open Then
-
-        'End If
-
-
+        If MySQLConn.State = ConnectionState.Open Then
+            MySQLConn.Close()
+        End If
 
         MySQLConn.ConnectionString = connstring
         Dim dbdataset As New DataTable
@@ -86,29 +84,25 @@ Public Class UserControl1
 
     Private Sub TabPage1_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabPage1.Enter
         Load_Transaction_Table()
+        Compute_TotalPrice()
+        Label2.Show()
+        LabelTotal.Show()
     End Sub
 
     Private Sub TabPage2_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabPage2.Enter
         load_items()
-    End Sub
-
-    Private Sub DataGridView_Transactions_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView_Transactions.CellContentClick
-
+        Label2.Hide()
+        LabelTotal.Hide()
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Print.ShowDialog()
     End Sub
-
-    Private Sub UserControl1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub Label2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label2.Click
-
-    End Sub
-
-    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
+    Public Sub Compute_TotalPrice()
+        Dim total As Integer
+        For i As Integer = 0 To DataGridView_Transactions.RowCount - 1
+            total += DataGridView_Transactions.Rows(i).Cells(4).Value
+        Next
+        LabelTotal.Text = total
     End Sub
 End Class

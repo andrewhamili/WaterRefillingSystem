@@ -116,6 +116,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryDistance.Designer.vb">
+      <DependentUpon>DeliveryDistance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryDistance.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +160,12 @@
     <Compile Include="Print.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="PrintTransaction.Designer.vb">
+      <DependentUpon>PrintTransaction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PrintTransaction.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserControl1.Designer.vb">
       <DependentUpon>UserControl1.vb</DependentUpon>
     </Compile>
@@ -174,6 +189,9 @@
     <EmbeddedResource Include="Control_Transaction.resx">
       <DependentUpon>Control_Transaction.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeliveryDistance.resx">
+      <DependentUpon>DeliveryDistance.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +208,12 @@
       <DependentUpon>Print.vb</DependentUpon>
     </EmbeddedResource>
     <Content Include="Report1.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="PrintTransaction.resx">
+      <DependentUpon>PrintTransaction.vb</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="Report2.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <EmbeddedResource Include="UserControl1.resx">

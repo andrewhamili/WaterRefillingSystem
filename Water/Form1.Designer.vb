@@ -222,7 +222,7 @@ Partial Class Form_Home
         '
         Me.Control_Transaction1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Control_Transaction1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.Control_Transaction1.Location = New System.Drawing.Point(138, 36)
+        Me.Control_Transaction1.Location = New System.Drawing.Point(130, 36)
         Me.Control_Transaction1.Margin = New System.Windows.Forms.Padding(4)
         Me.Control_Transaction1.Name = "Control_Transaction1"
         Me.Control_Transaction1.Size = New System.Drawing.Size(1079, 442)
@@ -235,6 +235,7 @@ Partial Class Form_Home
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1334, 685)
+        Me.Controls.Add(Me.Control_Transaction1)
         Me.Controls.Add(Me.UserControl_Maintenance1)
         Me.Controls.Add(Me.UserControl11)
         Me.Controls.Add(Me.Label6)
@@ -246,7 +247,6 @@ Partial Class Form_Home
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Control_Sales1)
         Me.Controls.Add(Me.Control_Employee1)
-        Me.Controls.Add(Me.Control_Transaction1)
         Me.Controls.Add(Me.B5_LogO)
         Me.Controls.Add(Me.B4_Sales)
         Me.Controls.Add(Me.B3_Inventory)
