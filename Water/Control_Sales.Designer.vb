@@ -31,6 +31,7 @@ Partial Class Control_Sales
         Me.DateTimePicker_SalesStartDate = New System.Windows.Forms.DateTimePicker()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
+        Me.Button_Print = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView_Transactions, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
@@ -64,6 +65,7 @@ Partial Class Control_Sales
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.Button_Print)
         Me.GroupBox4.Controls.Add(Me.Button_ShowAll)
         Me.GroupBox4.Controls.Add(Me.Button_Filter)
         Me.GroupBox4.Controls.Add(Me.DateTimePicker_SalesEndDate)
@@ -142,6 +144,15 @@ Partial Class Control_Sales
         Me.Label19.TabIndex = 13
         Me.Label19.Text = "Start Date:"
         '
+        'Button_Print
+        '
+        Me.Button_Print.Location = New System.Drawing.Point(618, 118)
+        Me.Button_Print.Name = "Button_Print"
+        Me.Button_Print.Size = New System.Drawing.Size(132, 23)
+        Me.Button_Print.TabIndex = 19
+        Me.Button_Print.Text = "Print"
+        Me.Button_Print.UseVisualStyleBackColor = True
+        '
         'Control_Sales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -169,5 +180,6 @@ Partial Class Control_Sales
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Button_Filter As System.Windows.Forms.Button
     Friend WithEvents Button_ShowAll As System.Windows.Forms.Button
+    Friend WithEvents Button_Print As System.Windows.Forms.Button
 
 End Class

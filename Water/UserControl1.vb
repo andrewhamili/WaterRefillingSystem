@@ -80,6 +80,7 @@ Public Class UserControl1
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+        Compute_TotalPrice()
     End Sub
 
     Private Sub TabPage1_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabPage1.Enter
@@ -87,12 +88,14 @@ Public Class UserControl1
         Compute_TotalPrice()
         Label2.Show()
         LabelTotal.Show()
+        Button2.Show()
     End Sub
 
     Private Sub TabPage2_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabPage2.Enter
         load_items()
         Label2.Hide()
         LabelTotal.Hide()
+        Button2.Hide()
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
@@ -104,5 +107,10 @@ Public Class UserControl1
             total += DataGridView_Transactions.Rows(i).Cells(4).Value
         Next
         LabelTotal.Text = total
+    End Sub
+
+    Private Sub UserControl1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Load_Transaction_Table()
+        DateTimePicker1.Value = Date.Now.ToString("yyyy-MM-dd")
     End Sub
 End Class

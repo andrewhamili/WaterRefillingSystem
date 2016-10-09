@@ -2,6 +2,20 @@
 Imports MySql.Data.MySqlClient
 Public Class Control_Transaction
     Public TransactionNumber As New Random()
+    Public OneLstockOnHand As Integer
+    Public OneLQuantity As Integer
+
+    Public SixLstockOnHand As Integer
+    Public SixLQuantity As Integer
+
+    Public TenLstockOnHand As Integer
+    Public TenLQuantity As Integer
+
+    Public FiveHundredLstockOnHand As Integer
+    Public FiveHundredLQuantity As Integer
+
+    Public FiveGstockOnHand As Integer
+    Public FiveGQuantity As Integer
     Private Sub Control_Transaction_Load(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Load_Products()
         Label_Price.Text = ""
@@ -79,6 +93,9 @@ Public Class Control_Transaction
                         Dim quantity As String
                         Dim productprice As Integer
 
+                        
+
+
                         TextBox_CustomerName.Enabled = False
                         Try
                             MySQLConn.Open()
@@ -94,20 +111,44 @@ Public Class Control_Transaction
                                 productname = reader.GetString("productname")
                                 productprice = reader.GetInt32("productprice")
                                 quantity = TextBox_quantity.Text
-                                CartPrice = CartPrice + productprice * quantity
 
                             End While
                             MySQLConn.Close()
-                            With DataGridView_Cart
-                                .Rows.Add()
-                                .Rows(Cart).Cells("productname").Value = productname
-                                .Rows(Cart).Cells("Qty").Value = quantity
-                                .Rows(Cart).Cells("productprice").Value = productprice * quantity
-                                Cart += 1
-                            End With
-                            Load_Products()
-                            Label_TotalPrice.Text = "Php." + FormatNumber(CDbl(CartPrice), 2)
-                            DataGridView_Cart.FirstDisplayedScrollingRowIndex = DataGridView_Cart.RowCount - 1
+                            Dim tempquantity As Integer
+                            Dim tempstockonhand As Integer
+                            MySQLConn.Open()
+                            comm = New MySqlCommand("SELECT productquantity FROM producttable WHERE productname=@selected", MySQLConn)
+                            comm.Parameters.AddWithValue("selected", Listbox_Products.Text)
+                            reader = comm.ExecuteReader
+                            While reader.Read
+                                tempquantity = reader.GetString("productquantity")
+                            End While
+                            MySQLConn.Close()
+                            MySQLConn.Open()
+                            comm = New MySqlCommand("SELECT COALESCE(sum(quantity), 0) AS total FROM transac_table WHERE productname=@selected", MySQLConn)
+                            comm.Parameters.AddWithValue("selected", Listbox_Products.Text)
+                            reader = comm.ExecuteReader
+                            While reader.Read
+                                tempstockonhand = tempquantity - reader.GetInt32("total")
+                            End While
+                            MySQLConn.Close()
+                            If quantity > tempstockonhand Then
+                                MsgBox("We do not have enough quantity of this product. We only have " & tempstockonhand & " left.", MsgBoxStyle.Critical, SystemTitle)
+                            Else
+                                With DataGridView_Cart
+                                    .Rows.Add()
+                                    .Rows(Cart).Cells("productname").Value = productname
+                                    .Rows(Cart).Cells("Qty").Value = quantity
+                                    .Rows(Cart).Cells("productprice").Value = productprice * quantity
+                                    Cart += 1
+                                    CartPrice = CartPrice + productprice * quantity
+                                End With
+                                Load_Products()
+                                Label_TotalPrice.Text = "Php." + FormatNumber(CDbl(CartPrice), 2)
+                                DataGridView_Cart.FirstDisplayedScrollingRowIndex = DataGridView_Cart.RowCount - 1
+                            End If
+
+
 
 
                         Catch ex As Exception
@@ -229,6 +270,26 @@ Tender:
         Catch ex As Exception
 
             MsgBox("CRITICAL ERROR : Exception caught while converting dataGridView to DataSet (dgvtods).. " & Chr(10) & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub Button_CancelTransaction_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button_CancelTransaction.Click
+        Button_Reset.PerformClick()
+    End Sub
+    Public Sub GetTotalStockOnHand()
+        If MySQLConn.State = ConnectionState.Open Then
+            MySQLConn.Close()
+        End If
+        MySQLConn.ConnectionString = connstring
+        Try
+            MySQLConn.Open()
+            comm = New MySqlCommand("SELECT productquantity FROM producttable", MySQLConn)
+            reader = comm.ExecuteReader
+            While reader.Read
+                OneLQuantity = reader.GetString("")
+            End While
+        Catch ex As Exception
+
         End Try
     End Sub
 End Class

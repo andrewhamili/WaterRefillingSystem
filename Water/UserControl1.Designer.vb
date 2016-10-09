@@ -43,7 +43,7 @@ Partial Class UserControl1
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(665, 309)
+        Me.Button2.Location = New System.Drawing.Point(530, 274)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(79, 38)
         Me.Button2.TabIndex = 1
@@ -64,10 +64,10 @@ Partial Class UserControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(51, 47)
+        Me.TabControl1.Location = New System.Drawing.Point(3, 47)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(700, 202)
+        Me.TabControl1.Size = New System.Drawing.Size(606, 202)
         Me.TabControl1.TabIndex = 5
         '
         'TabPage1
@@ -78,7 +78,7 @@ Partial Class UserControl1
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(692, 176)
+        Me.TabPage1.Size = New System.Drawing.Size(598, 176)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Sales"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -87,6 +87,7 @@ Partial Class UserControl1
         '
         Me.DataGridView_Transactions.AllowUserToAddRows = False
         Me.DataGridView_Transactions.AllowUserToDeleteRows = False
+        Me.DataGridView_Transactions.AllowUserToResizeRows = False
         Me.DataGridView_Transactions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView_Transactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView_Transactions.Dock = System.Windows.Forms.DockStyle.Fill
@@ -96,7 +97,7 @@ Partial Class UserControl1
         Me.DataGridView_Transactions.ReadOnly = True
         Me.DataGridView_Transactions.RowHeadersVisible = False
         Me.DataGridView_Transactions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView_Transactions.Size = New System.Drawing.Size(686, 170)
+        Me.DataGridView_Transactions.Size = New System.Drawing.Size(592, 170)
         Me.DataGridView_Transactions.TabIndex = 0
         '
         'TabPage2
@@ -105,7 +106,7 @@ Partial Class UserControl1
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(692, 176)
+        Me.TabPage2.Size = New System.Drawing.Size(837, 176)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Item"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -114,19 +115,20 @@ Partial Class UserControl1
         '
         Me.DataGridView_Item.AllowUserToAddRows = False
         Me.DataGridView_Item.AllowUserToDeleteRows = False
+        Me.DataGridView_Item.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView_Item.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView_Item.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView_Item.Location = New System.Drawing.Point(3, 3)
         Me.DataGridView_Item.Name = "DataGridView_Item"
         Me.DataGridView_Item.ReadOnly = True
-        Me.DataGridView_Item.Size = New System.Drawing.Size(686, 170)
+        Me.DataGridView_Item.Size = New System.Drawing.Size(831, 170)
         Me.DataGridView_Item.TabIndex = 0
         '
         'DateTimePicker1
         '
         Me.DateTimePicker1.CustomFormat = "yyyy-MM-dd"
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(367, 16)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(277, 19)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(77, 20)
         Me.DateTimePicker1.TabIndex = 6
@@ -136,7 +138,7 @@ Partial Class UserControl1
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(317, 16)
+        Me.Label3.Location = New System.Drawing.Point(227, 19)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(44, 20)
         Me.Label3.TabIndex = 7
@@ -175,7 +177,7 @@ Partial Class UserControl1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button2)
         Me.Name = "UserControl1"
-        Me.Size = New System.Drawing.Size(851, 350)
+        Me.Size = New System.Drawing.Size(633, 322)
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         CType(Me.DataGridView_Transactions, System.ComponentModel.ISupportInitialize).EndInit()

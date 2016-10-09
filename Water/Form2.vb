@@ -18,6 +18,7 @@ Class Form_LogIn
                 Dim count As Integer
                 While reader.Read
                     activeusername = reader.GetString("username")
+                    LoggedInName = reader.GetString("fname") + " " + reader.GetString("lname")
                     usertype = reader.GetString("usertype")
                     count += 1
                 End While

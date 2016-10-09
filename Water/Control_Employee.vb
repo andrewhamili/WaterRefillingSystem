@@ -52,7 +52,7 @@ Public Class Control_Employee
             MsgBox("Please choose a picture!", MsgBoxStyle.Exclamation, SystemTitle)
         Else
             Dim query As String
-            If TextBox_LastName.Text = "" Or TextBox_FirstName.Text = "" Or TextBox_FirstName.Text = "" Or TextBox_Address.Text = "" Or TextBox_Email.Text = "" Or TextBox_ContactNum.Text = "" Or TextBox_EmployeePassword.Text = "" Then
+            If TextBox_LastName.Text = "" Or TextBox_FirstName.Text = "" Or TextBox_FirstName.Text = "" Or TextBox_Address.Text = "" Or TextBox_Email.Text = "" Or TextBox_ContactNum.Text = "" Or TextBox_EmployeePassword.Text = "" Or ComboBox_Usertype.Text = "" Then
                 MsgBox("Please fill up all Fields!", MsgBoxStyle.Exclamation, SystemTitle)
             Else
                 Try
@@ -71,8 +71,9 @@ Public Class Control_Employee
                         comm.Parameters.AddWithValue("image", arrImage)
                         comm.Parameters.AddWithValue("usernametoedit", UsernameEdit)
                         message = "Updated"
+                        EmployeeAction = ""
                     Else
-                        query = "INSERT INTO logintable values(@firstname, @middlename, @lastname, @address, @contact, @email, @username,   sha2(@password, 512), @usertype, @image)"
+                        query = "INSERT INTO logintable values(@firstname, @middlename, @lastname, @address, @contact, @email, @username, sha2(@password, 512), @usertype, @image)"
                         comm = New MySqlCommand(query, MySQLConn)
                         comm.Parameters.AddWithValue("lastname", TextBox_LastName.Text)
                         comm.Parameters.AddWithValue("firstname", TextBox_FirstName.Text)
@@ -85,6 +86,7 @@ Public Class Control_Employee
                         comm.Parameters.AddWithValue("username", TextBox_Username.Text)
                         comm.Parameters.AddWithValue("image", arrImage)
                         message = "Registered"
+                        EmployeeAction = ""
                     End If
 
                     reader = comm.ExecuteReader
@@ -102,9 +104,9 @@ Public Class Control_Employee
                 Catch ex As Exception
                     MsgBox(ex.Message)
                 End Try
-
             End If
         End If
+
 
     End Sub
 
@@ -113,6 +115,7 @@ Public Class Control_Employee
         changepictureindicator = False
         Panel_EmployeeManager.Hide()
         Panel_EmployeeMain.Show()
+        EmployeeAction = ""
     End Sub
 
     Private Sub ListBox_EmployeeList_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox_EmployeeList.SelectedIndexChanged

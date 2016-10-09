@@ -1,37 +1,39 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports Microsoft.Reporting.WinForms
 
-Public Class Print
+Public Class PrintRange
 
-    Private Sub Print_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
+    Private Sub PrintRange_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         Me.Dispose()
     End Sub
 
-    Private Sub Print_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub PrintRange_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         ReportViewer1.LocalReport.ReleaseSandboxAppDomain()
     End Sub
 
-    Private Sub Print_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub PrintRange_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         If MySQLConn.State = ConnectionState.Open Then
             MySQLConn.Close()
         End If
-        MySQLConn.ConnectionString = connstring
         Try
             MySQLConn.Open()
-            Dim ds As New DataSet1
-            Dim dateselected As New ReportParameter("Date", Form_Home.UserControl11.DateTimePicker1.Value.ToString("YYYY-MM-dd"))
-            Dim prepared As New ReportParameter("PreparedBy", LoggedInName)
-
             Dim adapter As New MySqlDataAdapter
+            Dim ds As New DataSet1
+
+            Dim datefrom As New ReportParameter("DateFrom", Form_Home.Control_Sales1.DateTimePicker_SalesStartDate.Value.ToString("MM-dd-yyyy"))
+            Dim dateto As New ReportParameter("DateTo", Form_Home.Control_Sales1.DateTimePicker_SalesEndDate.Value.ToString("MM-dd-yyyy"))
+            Dim prepare As New ReportParameter("PreparedBy", LoggedInName)
+
             adapter.SelectCommand = comm
 
 
             adapter.Fill(ds.Tables(0))
             ReportViewer1.LocalReport.DataSources.Clear()
             ReportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local
-            ReportViewer1.LocalReport.ReportPath = System.Environment.CurrentDirectory + "\Report1.rdlc"
-            ReportViewer1.LocalReport.SetParameters(dateselected)
-            ReportViewer1.LocalReport.SetParameters(prepared)
+            ReportViewer1.LocalReport.ReportPath = System.Environment.CurrentDirectory + "\TransactionsByRange.rdlc"
+            ReportViewer1.LocalReport.SetParameters(datefrom)
+            ReportViewer1.LocalReport.SetParameters(dateto)
+            ReportViewer1.LocalReport.SetParameters(prepare)
             ReportViewer1.LocalReport.DataSources.Add(New Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", ds.Tables(0)))
 
             ReportViewer1.DocumentMapCollapsed = True

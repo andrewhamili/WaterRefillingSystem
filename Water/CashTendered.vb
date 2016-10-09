@@ -44,4 +44,8 @@
         End If
 
     End Sub
+
+    Private Sub CashTender_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        AcceptButton = Button_Proceed
+    End Sub
 End Class
