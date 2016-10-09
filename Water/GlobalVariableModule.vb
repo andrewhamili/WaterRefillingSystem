@@ -9,6 +9,7 @@ Module GlobalVariableModule
 
     'System variables
     Public SystemTitle As String = "Water Refilling Station"
+    Public LoggedInName As String
     Public activeusername As String
     Public usertype As String
 
@@ -20,6 +21,8 @@ Module GlobalVariableModule
     Public DeliveryPrice As Integer
 
     Public CurrentTransactionNumber As String
+    Public TransactionReceiptDataSet As New DataSet1
+    Public CashTendered As Double
 
 End Module
 

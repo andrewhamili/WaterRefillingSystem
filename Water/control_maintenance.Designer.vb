@@ -28,14 +28,14 @@ Partial Class UserControl_Maintenance
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Button_AddStocks = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label_quantity = New System.Windows.Forms.Label()
+        Me.Label_StockOnHand = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -52,12 +52,12 @@ Partial Class UserControl_Maintenance
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label_StockOnHand)
+        Me.GroupBox1.Controls.Add(Me.Label_quantity)
         Me.GroupBox1.Controls.Add(Me.ComboBox_ProductName)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Button_AddStocks)
         Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -104,20 +104,6 @@ Partial Class UserControl_Maintenance
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(145, 31)
         Me.TextBox3.TabIndex = 6
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(184, 127)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(145, 31)
-        Me.TextBox2.TabIndex = 5
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(184, 77)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(145, 31)
-        Me.TextBox1.TabIndex = 4
         '
         'Label5
         '
@@ -174,6 +160,24 @@ Partial Class UserControl_Maintenance
         Me.Panel1.Size = New System.Drawing.Size(411, 321)
         Me.Panel1.TabIndex = 13
         '
+        'Label_quantity
+        '
+        Me.Label_quantity.AutoSize = True
+        Me.Label_quantity.Location = New System.Drawing.Point(197, 83)
+        Me.Label_quantity.Name = "Label_quantity"
+        Me.Label_quantity.Size = New System.Drawing.Size(167, 25)
+        Me.Label_quantity.TabIndex = 9
+        Me.Label_quantity.Text = "Label_quantity"
+        '
+        'Label_StockOnHand
+        '
+        Me.Label_StockOnHand.AutoSize = True
+        Me.Label_StockOnHand.Location = New System.Drawing.Point(179, 129)
+        Me.Label_StockOnHand.Name = "Label_StockOnHand"
+        Me.Label_StockOnHand.Size = New System.Drawing.Size(227, 25)
+        Me.Label_StockOnHand.TabIndex = 10
+        Me.Label_StockOnHand.Text = "Label_StockOnHand"
+        '
         'UserControl_Maintenance
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -195,8 +199,6 @@ Partial Class UserControl_Maintenance
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
@@ -205,5 +207,7 @@ Partial Class UserControl_Maintenance
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents ComboBox_ProductName As System.Windows.Forms.ComboBox
+    Friend WithEvents Label_StockOnHand As System.Windows.Forms.Label
+    Friend WithEvents Label_quantity As System.Windows.Forms.Label
 
 End Class

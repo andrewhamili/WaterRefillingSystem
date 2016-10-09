@@ -93,6 +93,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CashTendered.Designer.vb">
+      <DependentUpon>CashTendered.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CashTendered.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Control_Employee.Designer.vb">
       <DependentUpon>Control_Employee.vb</DependentUpon>
     </Compile>
@@ -180,6 +186,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CashTendered.resx">
+      <DependentUpon>CashTendered.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control_Employee.resx">
       <DependentUpon>Control_Employee.vb</DependentUpon>
     </EmbeddedResource>

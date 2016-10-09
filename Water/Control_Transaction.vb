@@ -124,8 +124,8 @@ Public Class Control_Transaction
         TextBox_quantity.Text = 1
     End Sub
 
-    Private Sub Button_Checkout_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button_Checkout.Click
-        
+    Public Sub Button_Checkout_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button_Checkout.Click
+
 
         If MySQLConn.State = ConnectionState.Open Then
             MySQLConn.Close()
@@ -135,6 +135,7 @@ Public Class Control_Transaction
         Dim rownumber As Integer = DataGridView_Cart.Rows.Count
         Dim counter As Integer = 0
         Dim query As String
+
         MySQLConn.ConnectionString = connstring
         If rownumber > 0 Then
             Dim deliver As DialogResult = MsgBox("Is it for Delivery?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, SystemTitle)
@@ -172,25 +173,15 @@ Public Class Control_Transaction
                 End Try
                 counter = counter + 1
             End While
-            Cart = 0
-            CartPrice = 0
         Else
             MsgBox("The Cart is empty!", MsgBoxStyle.Exclamation, SystemTitle)
 
         End If
         If success = True Then
-            'Tender:
-            '            Dim Cash As String
-            '            Dim CashTendered As String = InputBox("Enter Amount Tendered:", "Check-out", "0.00")
-            '            For i As Integer = 0 To CashTendered.Length - 1
-            '                Cash = CashTendered.Substring(i, 1)
-            '                If Not (Char.IsDigit(Cash)) Then
-            '                    MsgBox("Invalid Character has been detected!")
-
-            '                    GoTo Tender
-            '                End If
-            '            Next
-
+Tender:
+            
+            PrepareTransactionReceipt()
+            CashTender.ShowDialog()
             CurrentTransactionNumber = Label_TransactionNum.Text
             PrintTransaction.ShowDialog()
             MsgBox("The Transaction was successfully saved!", MsgBoxStyle.Information, SystemTitle)
@@ -198,7 +189,9 @@ Public Class Control_Transaction
         Else
             MsgBox("There was an error saving the transaction", MsgBoxStyle.Critical, SystemTitle)
         End If
-
+        Button_Reset_Click()
+        Cart = 0
+        CartPrice = 0
     End Sub
 
     Public Sub Button_Reset_Click() Handles Button_Reset.Click
@@ -210,5 +203,32 @@ Public Class Control_Transaction
         CartPrice = 0
         DataGridView_Cart.Rows.Clear()
         TextBox_CustomerName.Enabled = True
+    End Sub
+    Public Sub PrepareTransactionReceipt()
+        Try
+            '' Add Table
+            'ds.Tables.Add("Test")
+
+            '' Add Columns
+            'Dim col As DataColumn
+            'For Each dgvCol As DataGridViewColumn In DataGridView1.Columns
+            '    col = New DataColumn(dgvCol.Name)
+            '    ds.Tables("Invoices").Columns.Add(col)
+            'Next
+
+            ' Rows from the datagridview
+            Dim row As DataRow
+            Dim colcount As Integer = DataGridView_Cart.Columns.Count - 1
+            For i As Integer = 0 To DataGridView_Cart.Rows.Count - 1
+                row = TransactionReceiptDataSet.Tables(2).Rows.Add
+                For Each column As DataGridViewColumn In DataGridView_Cart.Columns
+                    row.Item(column.Index) = DataGridView_Cart.Rows.Item(i).Cells(column.Index).Value
+                Next
+            Next
+
+        Catch ex As Exception
+
+            MsgBox("CRITICAL ERROR : Exception caught while converting dataGridView to DataSet (dgvtods).. " & Chr(10) & ex.Message)
+        End Try
     End Sub
 End Class

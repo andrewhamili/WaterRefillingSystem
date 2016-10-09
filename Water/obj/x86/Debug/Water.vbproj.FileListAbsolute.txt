@@ -94,3 +94,5 @@ C:\Users\Andrew\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\
 C:\Users\Andrew\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\Water.pdb
 C:\Users\Andrew\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\Water.PrintTransaction.resources
 C:\Users\Andrew\Documents\Visual Studio 2010\Projects\FINAL\Water\bin\Debug\Report2.rdlc
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\Water.vbprojResolveAssemblyReference.cache
+C:\Users\Andrew\Documents\Visual Studio 2010\Projects\FINAL\Water\obj\x86\Debug\Water.CashTender.resources
